@@ -1,20 +1,18 @@
 /**
- * Google AdSense 広告枠
+ * Google AdSense 広告ユニット（手動配置用・現状未使用）
  *
  * 依存関係:
- * - NEXT_PUBLIC_ADSENSE_CLIENT_ID 環境変数（Vercelのプロジェクト設定で追加する）
- * - src/app/layout.tsx でAdSenseの読み込みスクリプトを読み込む（同じ環境変数で判定）
+ * - src/lib/adsense.ts の ADSENSE_CLIENT_ID を使う
+ * - src/app/layout.tsx がAdSenseの読み込みスクリプトを設置する（自動広告用。このコンポーネントとは独立）
  *
- * AdSenseの審査が通ってパブリッシャーID（ca-pub-で始まる番号）が発行されるまでは
- * NEXT_PUBLIC_ADSENSE_CLIENT_ID が未設定のため、このコンポーネントは常に何も描画しない
- * （安全に本番へ置いておける）。IDを設定し、AdSenseダッシュボードで広告ユニットを作成して
- * 発行されるslot番号をここに渡せば、コード変更なしで広告が有効になる。
+ * 今は自動広告（layout.tsxのスクリプトのみ）でGoogleが最適な位置に自動配置しているため、
+ * このコンポーネントはどこからも呼ばれていない。特定の位置に手動で広告ユニットを置きたく
+ * なった場合、AdSenseダッシュボードで広告ユニットを作成して発行されるslot番号を渡せば使える。
  */
 "use client";
 
 import { useEffect, useId } from "react";
-
-export const ADSENSE_CLIENT_ID = process.env.NEXT_PUBLIC_ADSENSE_CLIENT_ID;
+import { ADSENSE_CLIENT_ID } from "@/lib/adsense";
 
 interface AdSlotProps {
   /** AdSenseの広告ユニット作成時に発行されるslot番号 */
@@ -26,7 +24,6 @@ export function AdSlot({ slot, className }: AdSlotProps) {
   const id = useId();
 
   useEffect(() => {
-    if (!ADSENSE_CLIENT_ID) return;
     try {
       const adsbygoogle = (window as unknown as { adsbygoogle?: unknown[] }).adsbygoogle ?? [];
       adsbygoogle.push({});
@@ -35,8 +32,6 @@ export function AdSlot({ slot, className }: AdSlotProps) {
       // AdSenseスクリプト未読み込み時などは何もしない（広告が出ないだけで致命的ではない）
     }
   }, [id]);
-
-  if (!ADSENSE_CLIENT_ID) return null;
 
   return (
     <ins

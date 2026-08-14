@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import Script from "next/script";
+import { ADSENSE_CLIENT_ID } from "@/lib/adsense";
 import "./globals.css";
 
 /**
@@ -58,8 +59,6 @@ export const metadata: Metadata = {
   },
 };
 
-const ADSENSE_CLIENT_ID = process.env.NEXT_PUBLIC_ADSENSE_CLIENT_ID;
-
 export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
     <html
@@ -70,16 +69,14 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
         <Script id="theme-init" strategy="beforeInteractive">
           {THEME_INIT_SCRIPT}
         </Script>
-        {/* パブリッシャーID未設定の間は読み込まない（AdSense審査通過後、Vercelの環境変数に
-            NEXT_PUBLIC_ADSENSE_CLIENT_ID を設定するだけで有効になる） */}
-        {ADSENSE_CLIENT_ID && (
-          <Script
-            async
-            src={`https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${ADSENSE_CLIENT_ID}`}
-            crossOrigin="anonymous"
-            strategy="afterInteractive"
-          />
-        )}
+        {/* AdSenseの自動広告用スクリプト。全ページのheadに設置することで、Googleが最適な位置に
+            自動で広告を配置する（個別の広告ユニット作成は不要） */}
+        <Script
+          async
+          src={`https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${ADSENSE_CLIENT_ID}`}
+          crossOrigin="anonymous"
+          strategy="afterInteractive"
+        />
         {children}
       </body>
     </html>
