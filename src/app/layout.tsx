@@ -1,6 +1,27 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
+import Script from "next/script";
 import "./globals.css";
+
+/**
+ * 初回描画前に配色テーマ（light/dark/system）を確定させ、ちらつき（一瞬ダーク→ライトに切り替わる等）を防ぐ。
+ * ThemeToggle（src/components/ThemeToggle.tsx）と同じ判定ロジックをここでも独立して持つ必要がある
+ * （Reactのハイドレーション前に生JSで.darkクラスを当てる必要があるため）。
+ */
+const THEME_INIT_SCRIPT = `
+(function () {
+  try {
+    var raw = localStorage.getItem("sf6-command-lab-settings");
+    var theme = "system";
+    if (raw) {
+      var parsed = JSON.parse(raw);
+      theme = (parsed && parsed.state && parsed.state.theme) || "system";
+    }
+    var isDark = theme === "dark" || (theme === "system" && window.matchMedia("(prefers-color-scheme: dark)").matches);
+    document.documentElement.classList.toggle("dark", isDark);
+  } catch (e) {}
+})();
+`;
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -23,7 +44,12 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
       lang="en"
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col">{children}</body>
+      <body className="min-h-full flex flex-col">
+        <Script id="theme-init" strategy="beforeInteractive">
+          {THEME_INIT_SCRIPT}
+        </Script>
+        {children}
+      </body>
     </html>
   );
 }

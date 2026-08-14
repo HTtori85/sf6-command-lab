@@ -1,0 +1,6070 @@
+[
+  {
+    "id": "ryu_hadoken",
+    "characterId": "ryu",
+    "name": "波動拳",
+    "notation": "236P",
+    "category": "special",
+    "steps": [
+      {
+        "direction": 2
+      },
+      {
+        "direction": 3,
+        "optional": true
+      },
+      {
+        "direction": 6,
+        "anyButtons": [
+          "LP",
+          "MP",
+          "HP"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "ryu_shoryuken",
+    "characterId": "ryu",
+    "name": "昇竜拳",
+    "notation": "623P",
+    "category": "special",
+    "steps": [
+      {
+        "direction": 6
+      },
+      {
+        "direction": 2
+      },
+      {
+        "direction": 3,
+        "anyButtons": [
+          "LP",
+          "MP",
+          "HP"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "ryu_tatsumaki",
+    "characterId": "ryu",
+    "name": "竜巻旋風脚",
+    "notation": "214K",
+    "category": "special",
+    "steps": [
+      {
+        "direction": 2
+      },
+      {
+        "direction": 1,
+        "optional": true
+      },
+      {
+        "direction": 4,
+        "anyButtons": [
+          "LK",
+          "MK",
+          "HK"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "ryu_denjinrenki",
+    "characterId": "ryu",
+    "name": "電刃錬気",
+    "notation": "22P",
+    "category": "special",
+    "steps": [
+      {
+        "direction": 2
+      },
+      {
+        "direction": 2,
+        "anyButtons": [
+          "LP",
+          "MP",
+          "HP"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "ryu_sa1",
+    "characterId": "ryu",
+    "name": "SA1 真空波動拳",
+    "notation": "236236P",
+    "category": "super",
+    "steps": [
+      {
+        "direction": 2
+      },
+      {
+        "direction": 3,
+        "optional": true
+      },
+      {
+        "direction": 6
+      },
+      {
+        "direction": 2
+      },
+      {
+        "direction": 3,
+        "optional": true
+      },
+      {
+        "direction": 6,
+        "anyButtons": [
+          "LP",
+          "MP",
+          "HP"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "ryu_sa2",
+    "characterId": "ryu",
+    "name": "SA2 真・波掌撃",
+    "notation": "214214P",
+    "category": "super",
+    "steps": [
+      {
+        "direction": 2
+      },
+      {
+        "direction": 1,
+        "optional": true
+      },
+      {
+        "direction": 4
+      },
+      {
+        "direction": 2
+      },
+      {
+        "direction": 1,
+        "optional": true
+      },
+      {
+        "direction": 4,
+        "anyButtons": [
+          "LP",
+          "MP",
+          "HP"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "ryu_sa3",
+    "characterId": "ryu",
+    "name": "SA3 真・昇龍拳",
+    "notation": "236236K",
+    "category": "super",
+    "steps": [
+      {
+        "direction": 2
+      },
+      {
+        "direction": 3,
+        "optional": true
+      },
+      {
+        "direction": 6
+      },
+      {
+        "direction": 2
+      },
+      {
+        "direction": 3,
+        "optional": true
+      },
+      {
+        "direction": 6,
+        "anyButtons": [
+          "LK",
+          "MK",
+          "HK"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "ken_hadoken",
+    "characterId": "ken",
+    "name": "波動拳",
+    "notation": "236P",
+    "category": "special",
+    "steps": [
+      {
+        "direction": 2
+      },
+      {
+        "direction": 3,
+        "optional": true
+      },
+      {
+        "direction": 6,
+        "anyButtons": [
+          "LP",
+          "MP",
+          "HP"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "ken_shoryuken",
+    "characterId": "ken",
+    "name": "昇竜拳",
+    "notation": "623P",
+    "category": "special",
+    "steps": [
+      {
+        "direction": 6
+      },
+      {
+        "direction": 2
+      },
+      {
+        "direction": 3,
+        "anyButtons": [
+          "LP",
+          "MP",
+          "HP"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "ken_tatsumaki",
+    "characterId": "ken",
+    "name": "竜巻旋風脚",
+    "notation": "214K",
+    "category": "special",
+    "steps": [
+      {
+        "direction": 2
+      },
+      {
+        "direction": 1,
+        "optional": true
+      },
+      {
+        "direction": 4,
+        "anyButtons": [
+          "LK",
+          "MK",
+          "HK"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "ken_sa1",
+    "characterId": "ken",
+    "name": "SA1 疾風迅雷脚",
+    "notation": "236236K",
+    "category": "super",
+    "steps": [
+      {
+        "direction": 2
+      },
+      {
+        "direction": 3,
+        "optional": true
+      },
+      {
+        "direction": 6
+      },
+      {
+        "direction": 2
+      },
+      {
+        "direction": 3,
+        "optional": true
+      },
+      {
+        "direction": 6,
+        "anyButtons": [
+          "LK",
+          "MK",
+          "HK"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "ken_sa2",
+    "characterId": "ken",
+    "name": "SA2 龍尾烈脚",
+    "notation": "214214K",
+    "category": "super",
+    "steps": [
+      {
+        "direction": 2
+      },
+      {
+        "direction": 1,
+        "optional": true
+      },
+      {
+        "direction": 4
+      },
+      {
+        "direction": 2
+      },
+      {
+        "direction": 1,
+        "optional": true
+      },
+      {
+        "direction": 4,
+        "anyButtons": [
+          "LK",
+          "MK",
+          "HK"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "ken_sa3",
+    "characterId": "ken",
+    "name": "SA3 神龍烈破",
+    "notation": "236236P",
+    "category": "super",
+    "steps": [
+      {
+        "direction": 2
+      },
+      {
+        "direction": 3,
+        "optional": true
+      },
+      {
+        "direction": 6
+      },
+      {
+        "direction": 2
+      },
+      {
+        "direction": 3,
+        "optional": true
+      },
+      {
+        "direction": 6,
+        "anyButtons": [
+          "LP",
+          "MP",
+          "HP"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "luke_sandblast",
+    "characterId": "luke",
+    "name": "サンドブラスト",
+    "notation": "236P",
+    "category": "special",
+    "steps": [
+      {
+        "direction": 2
+      },
+      {
+        "direction": 3,
+        "optional": true
+      },
+      {
+        "direction": 6,
+        "anyButtons": [
+          "LP",
+          "MP",
+          "HP"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "luke_flashknuckle",
+    "characterId": "luke",
+    "name": "フラッシュナックル",
+    "notation": "214P",
+    "category": "special",
+    "steps": [
+      {
+        "direction": 2
+      },
+      {
+        "direction": 1,
+        "optional": true
+      },
+      {
+        "direction": 4,
+        "anyButtons": [
+          "LP",
+          "MP",
+          "HP"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "luke_avenger",
+    "characterId": "luke",
+    "name": "アベンジャー",
+    "notation": "236K",
+    "category": "special",
+    "steps": [
+      {
+        "direction": 2
+      },
+      {
+        "direction": 3,
+        "optional": true
+      },
+      {
+        "direction": 6,
+        "anyButtons": [
+          "LK",
+          "MK",
+          "HK"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "luke_risinguppercut",
+    "characterId": "luke",
+    "name": "ライジングアッパー",
+    "notation": "623P",
+    "category": "special",
+    "steps": [
+      {
+        "direction": 6
+      },
+      {
+        "direction": 2
+      },
+      {
+        "direction": 3,
+        "anyButtons": [
+          "LP",
+          "MP",
+          "HP"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "luke_sa1",
+    "characterId": "luke",
+    "name": "SA1 バルカンブラスト",
+    "notation": "236236P",
+    "category": "super",
+    "steps": [
+      {
+        "direction": 2
+      },
+      {
+        "direction": 3,
+        "optional": true
+      },
+      {
+        "direction": 6
+      },
+      {
+        "direction": 2
+      },
+      {
+        "direction": 3,
+        "optional": true
+      },
+      {
+        "direction": 6,
+        "anyButtons": [
+          "LP",
+          "MP",
+          "HP"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "luke_sa2",
+    "characterId": "luke",
+    "name": "SA2 イレイザー",
+    "notation": "214214P",
+    "category": "super",
+    "steps": [
+      {
+        "direction": 2
+      },
+      {
+        "direction": 1,
+        "optional": true
+      },
+      {
+        "direction": 4
+      },
+      {
+        "direction": 2
+      },
+      {
+        "direction": 1,
+        "optional": true
+      },
+      {
+        "direction": 4,
+        "anyButtons": [
+          "LP",
+          "MP",
+          "HP"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "luke_sa3",
+    "characterId": "luke",
+    "name": "SA3 ペイルライダー",
+    "notation": "236236K",
+    "category": "super",
+    "steps": [
+      {
+        "direction": 2
+      },
+      {
+        "direction": 3,
+        "optional": true
+      },
+      {
+        "direction": 6
+      },
+      {
+        "direction": 2
+      },
+      {
+        "direction": 3,
+        "optional": true
+      },
+      {
+        "direction": 6,
+        "anyButtons": [
+          "LK",
+          "MK",
+          "HK"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "jamie_mashin",
+    "characterId": "jamie",
+    "name": "魔身",
+    "notation": "22P",
+    "category": "special",
+    "steps": [
+      {
+        "direction": 2
+      },
+      {
+        "direction": 2,
+        "anyButtons": [
+          "LP",
+          "MP",
+          "HP"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "jamie_suishippo",
+    "characterId": "jamie",
+    "name": "酔疾歩",
+    "notation": "214P",
+    "category": "special",
+    "steps": [
+      {
+        "direction": 2
+      },
+      {
+        "direction": 1,
+        "optional": true
+      },
+      {
+        "direction": 4,
+        "anyButtons": [
+          "LP",
+          "MP",
+          "HP"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "jamie_chokyutai",
+    "characterId": "jamie",
+    "name": "張弓腿",
+    "notation": "623K",
+    "category": "special",
+    "steps": [
+      {
+        "direction": 6
+      },
+      {
+        "direction": 2
+      },
+      {
+        "direction": 3,
+        "anyButtons": [
+          "LK",
+          "MK",
+          "HK"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "jamie_mueishu",
+    "characterId": "jamie",
+    "name": "無影蹴",
+    "notation": "214K",
+    "category": "special",
+    "steps": [
+      {
+        "direction": 2
+      },
+      {
+        "direction": 1,
+        "optional": true
+      },
+      {
+        "direction": 4,
+        "anyButtons": [
+          "LK",
+          "MK",
+          "HK"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "jamie_bakukai",
+    "characterId": "jamie",
+    "name": "爆廻",
+    "notation": "236K",
+    "category": "special",
+    "steps": [
+      {
+        "direction": 2
+      },
+      {
+        "direction": 3,
+        "optional": true
+      },
+      {
+        "direction": 6,
+        "anyButtons": [
+          "LK",
+          "MK",
+          "HK"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "jamie_tenshin",
+    "characterId": "jamie",
+    "name": "点辰",
+    "notation": "63214K",
+    "category": "special",
+    "steps": [
+      {
+        "direction": 6
+      },
+      {
+        "direction": 3,
+        "optional": true
+      },
+      {
+        "direction": 2
+      },
+      {
+        "direction": 1,
+        "optional": true
+      },
+      {
+        "direction": 4,
+        "anyButtons": [
+          "LK",
+          "MK",
+          "HK"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "jamie_sa1",
+    "characterId": "jamie",
+    "name": "SA1 武麗禽",
+    "notation": "236236K",
+    "category": "super",
+    "steps": [
+      {
+        "direction": 2
+      },
+      {
+        "direction": 3,
+        "optional": true
+      },
+      {
+        "direction": 6
+      },
+      {
+        "direction": 2
+      },
+      {
+        "direction": 3,
+        "optional": true
+      },
+      {
+        "direction": 6,
+        "anyButtons": [
+          "LK",
+          "MK",
+          "HK"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "jamie_sa2",
+    "characterId": "jamie",
+    "name": "SA2 絶唱魔身",
+    "notation": "214214P",
+    "category": "super",
+    "steps": [
+      {
+        "direction": 2
+      },
+      {
+        "direction": 1,
+        "optional": true
+      },
+      {
+        "direction": 4
+      },
+      {
+        "direction": 2
+      },
+      {
+        "direction": 1,
+        "optional": true
+      },
+      {
+        "direction": 4,
+        "anyButtons": [
+          "LP",
+          "MP",
+          "HP"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "jamie_sa3",
+    "characterId": "jamie",
+    "name": "SA3 月牙叉炮",
+    "notation": "236236P",
+    "category": "super",
+    "steps": [
+      {
+        "direction": 2
+      },
+      {
+        "direction": 3,
+        "optional": true
+      },
+      {
+        "direction": 6
+      },
+      {
+        "direction": 2
+      },
+      {
+        "direction": 3,
+        "optional": true
+      },
+      {
+        "direction": 6,
+        "anyButtons": [
+          "LP",
+          "MP",
+          "HP"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "chunli_hyakuretsukyaku",
+    "characterId": "chunli",
+    "name": "百裂脚",
+    "notation": "236K",
+    "category": "special",
+    "steps": [
+      {
+        "direction": 2
+      },
+      {
+        "direction": 3,
+        "optional": true
+      },
+      {
+        "direction": 6,
+        "anyButtons": [
+          "LK",
+          "MK",
+          "HK"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "chunli_hazanshu",
+    "characterId": "chunli",
+    "name": "覇山蹴",
+    "notation": "214K",
+    "category": "special",
+    "steps": [
+      {
+        "direction": 2
+      },
+      {
+        "direction": 1,
+        "optional": true
+      },
+      {
+        "direction": 4,
+        "anyButtons": [
+          "LK",
+          "MK",
+          "HK"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "chunli_tenshokyaku",
+    "characterId": "chunli",
+    "name": "天昇脚",
+    "notation": "22K",
+    "category": "special",
+    "steps": [
+      {
+        "direction": 2
+      },
+      {
+        "direction": 2,
+        "anyButtons": [
+          "LK",
+          "MK",
+          "HK"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "chunli_sa1",
+    "characterId": "chunli",
+    "name": "SA1 気功掌",
+    "notation": "236236P",
+    "category": "super",
+    "steps": [
+      {
+        "direction": 2
+      },
+      {
+        "direction": 3,
+        "optional": true
+      },
+      {
+        "direction": 6
+      },
+      {
+        "direction": 2
+      },
+      {
+        "direction": 3,
+        "optional": true
+      },
+      {
+        "direction": 6,
+        "anyButtons": [
+          "LP",
+          "MP",
+          "HP"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "chunli_sa2",
+    "characterId": "chunli",
+    "name": "SA2 鳳翼扇",
+    "notation": "236236K",
+    "category": "super",
+    "steps": [
+      {
+        "direction": 2
+      },
+      {
+        "direction": 3,
+        "optional": true
+      },
+      {
+        "direction": 6
+      },
+      {
+        "direction": 2
+      },
+      {
+        "direction": 3,
+        "optional": true
+      },
+      {
+        "direction": 6,
+        "anyButtons": [
+          "LK",
+          "MK",
+          "HK"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "chunli_sa3",
+    "characterId": "chunli",
+    "name": "SA3 蒼天乱華",
+    "notation": "214214K",
+    "category": "super",
+    "steps": [
+      {
+        "direction": 2
+      },
+      {
+        "direction": 1,
+        "optional": true
+      },
+      {
+        "direction": 4
+      },
+      {
+        "direction": 2
+      },
+      {
+        "direction": 1,
+        "optional": true
+      },
+      {
+        "direction": 4,
+        "anyButtons": [
+          "LK",
+          "MK",
+          "HK"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "guile_sonicblade",
+    "characterId": "guile",
+    "name": "ソニックブレイド",
+    "notation": "214P",
+    "category": "special",
+    "steps": [
+      {
+        "direction": 2
+      },
+      {
+        "direction": 1,
+        "optional": true
+      },
+      {
+        "direction": 4,
+        "anyButtons": [
+          "LP",
+          "MP",
+          "HP"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "guile_sa",
+    "characterId": "guile",
+    "name": "SA ソリッドパンチャー",
+    "notation": "214214P",
+    "category": "super",
+    "steps": [
+      {
+        "direction": 2
+      },
+      {
+        "direction": 1,
+        "optional": true
+      },
+      {
+        "direction": 4
+      },
+      {
+        "direction": 2
+      },
+      {
+        "direction": 1,
+        "optional": true
+      },
+      {
+        "direction": 4,
+        "anyButtons": [
+          "LP",
+          "MP",
+          "HP"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "kimberly_bushinsenpukyaku",
+    "characterId": "kimberly",
+    "name": "武神旋風脚",
+    "notation": "214K",
+    "category": "special",
+    "steps": [
+      {
+        "direction": 2
+      },
+      {
+        "direction": 1,
+        "optional": true
+      },
+      {
+        "direction": 4,
+        "anyButtons": [
+          "LK",
+          "MK",
+          "HK"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "kimberly_hayakake",
+    "characterId": "kimberly",
+    "name": "疾駆け",
+    "notation": "236K",
+    "category": "special",
+    "steps": [
+      {
+        "direction": 2
+      },
+      {
+        "direction": 3,
+        "optional": true
+      },
+      {
+        "direction": 6,
+        "anyButtons": [
+          "LK",
+          "MK",
+          "HK"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "kimberly_rutenichimonji",
+    "characterId": "kimberly",
+    "name": "流転一文字",
+    "notation": "236P",
+    "category": "special",
+    "steps": [
+      {
+        "direction": 2
+      },
+      {
+        "direction": 3,
+        "optional": true
+      },
+      {
+        "direction": 6,
+        "anyButtons": [
+          "LP",
+          "MP",
+          "HP"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "kimberly_saiongyou",
+    "characterId": "kimberly",
+    "name": "彩隠形",
+    "notation": "214P",
+    "category": "special",
+    "steps": [
+      {
+        "direction": 2
+      },
+      {
+        "direction": 1,
+        "optional": true
+      },
+      {
+        "direction": 4,
+        "anyButtons": [
+          "LP",
+          "MP",
+          "HP"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "kimberly_shouraizaiku",
+    "characterId": "kimberly",
+    "name": "召雷細工",
+    "notation": "22P",
+    "category": "special",
+    "steps": [
+      {
+        "direction": 2
+      },
+      {
+        "direction": 2,
+        "anyButtons": [
+          "LP",
+          "MP",
+          "HP"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "kimberly_sa1",
+    "characterId": "kimberly",
+    "name": "SA1 武神乱拍子",
+    "notation": "236236K",
+    "category": "super",
+    "steps": [
+      {
+        "direction": 2
+      },
+      {
+        "direction": 3,
+        "optional": true
+      },
+      {
+        "direction": 6
+      },
+      {
+        "direction": 2
+      },
+      {
+        "direction": 3,
+        "optional": true
+      },
+      {
+        "direction": 6,
+        "anyButtons": [
+          "LK",
+          "MK",
+          "HK"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "kimberly_sa2",
+    "characterId": "kimberly",
+    "name": "SA2 武神天翔亢竜",
+    "notation": "214214P",
+    "category": "super",
+    "steps": [
+      {
+        "direction": 2
+      },
+      {
+        "direction": 1,
+        "optional": true
+      },
+      {
+        "direction": 4
+      },
+      {
+        "direction": 2
+      },
+      {
+        "direction": 1,
+        "optional": true
+      },
+      {
+        "direction": 4,
+        "anyButtons": [
+          "LP",
+          "MP",
+          "HP"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "kimberly_sa3",
+    "characterId": "kimberly",
+    "name": "SA3 武神顕現神楽",
+    "notation": "236236P",
+    "category": "super",
+    "steps": [
+      {
+        "direction": 2
+      },
+      {
+        "direction": 3,
+        "optional": true
+      },
+      {
+        "direction": 6
+      },
+      {
+        "direction": 2
+      },
+      {
+        "direction": 3,
+        "optional": true
+      },
+      {
+        "direction": 6,
+        "anyButtons": [
+          "LP",
+          "MP",
+          "HP"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "juri_fuhajin",
+    "characterId": "juri",
+    "name": "風破刃",
+    "notation": "214K",
+    "category": "special",
+    "steps": [
+      {
+        "direction": 2
+      },
+      {
+        "direction": 1,
+        "optional": true
+      },
+      {
+        "direction": 4,
+        "anyButtons": [
+          "LK",
+          "MK",
+          "HK"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "juri_tensenrin",
+    "characterId": "juri",
+    "name": "天穿輪",
+    "notation": "623P",
+    "category": "special",
+    "steps": [
+      {
+        "direction": 6
+      },
+      {
+        "direction": 2
+      },
+      {
+        "direction": 3,
+        "anyButtons": [
+          "LP",
+          "MP",
+          "HP"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "juri_sa1",
+    "characterId": "juri",
+    "name": "SA1 殺界風破斬",
+    "notation": "236236K",
+    "category": "super",
+    "steps": [
+      {
+        "direction": 2
+      },
+      {
+        "direction": 3,
+        "optional": true
+      },
+      {
+        "direction": 6
+      },
+      {
+        "direction": 2
+      },
+      {
+        "direction": 3,
+        "optional": true
+      },
+      {
+        "direction": 6,
+        "anyButtons": [
+          "LK",
+          "MK",
+          "HK"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "juri_sa2",
+    "characterId": "juri",
+    "name": "SA2 風水エンジン",
+    "notation": "214214P",
+    "category": "super",
+    "steps": [
+      {
+        "direction": 2
+      },
+      {
+        "direction": 1,
+        "optional": true
+      },
+      {
+        "direction": 4
+      },
+      {
+        "direction": 2
+      },
+      {
+        "direction": 1,
+        "optional": true
+      },
+      {
+        "direction": 4,
+        "anyButtons": [
+          "LP",
+          "MP",
+          "HP"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "juri_sa3",
+    "characterId": "juri",
+    "name": "SA3 回旋断界落",
+    "notation": "214214K",
+    "category": "super",
+    "steps": [
+      {
+        "direction": 2
+      },
+      {
+        "direction": 1,
+        "optional": true
+      },
+      {
+        "direction": 4
+      },
+      {
+        "direction": 2
+      },
+      {
+        "direction": 1,
+        "optional": true
+      },
+      {
+        "direction": 4,
+        "anyButtons": [
+          "LK",
+          "MK",
+          "HK"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "blanka_electricthunder",
+    "characterId": "blanka",
+    "name": "エレクトリックサンダー",
+    "notation": "214P",
+    "category": "special",
+    "steps": [
+      {
+        "direction": 2
+      },
+      {
+        "direction": 1,
+        "optional": true
+      },
+      {
+        "direction": 4,
+        "anyButtons": [
+          "LP",
+          "MP",
+          "HP"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "blanka_backsteprolling",
+    "characterId": "blanka",
+    "name": "バックステップローリング",
+    "notation": "63214K",
+    "category": "special",
+    "steps": [
+      {
+        "direction": 6
+      },
+      {
+        "direction": 3,
+        "optional": true
+      },
+      {
+        "direction": 2
+      },
+      {
+        "direction": 1,
+        "optional": true
+      },
+      {
+        "direction": 4,
+        "anyButtons": [
+          "LK",
+          "MK",
+          "HK"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "blanka_wildhunt",
+    "characterId": "blanka",
+    "name": "ワイルドハント",
+    "notation": "236K",
+    "category": "special",
+    "steps": [
+      {
+        "direction": 2
+      },
+      {
+        "direction": 3,
+        "optional": true
+      },
+      {
+        "direction": 6,
+        "anyButtons": [
+          "LK",
+          "MK",
+          "HK"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "blanka_blankachanbomb",
+    "characterId": "blanka",
+    "name": "ブランカちゃん爆弾",
+    "notation": "22P",
+    "category": "special",
+    "steps": [
+      {
+        "direction": 2
+      },
+      {
+        "direction": 2,
+        "anyButtons": [
+          "LP",
+          "MP",
+          "HP"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "blanka_sa1",
+    "characterId": "blanka",
+    "name": "SA1 シャウトオブアース",
+    "notation": "236236P",
+    "category": "super",
+    "steps": [
+      {
+        "direction": 2
+      },
+      {
+        "direction": 3,
+        "optional": true
+      },
+      {
+        "direction": 6
+      },
+      {
+        "direction": 2
+      },
+      {
+        "direction": 3,
+        "optional": true
+      },
+      {
+        "direction": 6,
+        "anyButtons": [
+          "LP",
+          "MP",
+          "HP"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "blanka_sa2",
+    "characterId": "blanka",
+    "name": "SA2 ライトニングビースト",
+    "notation": "214214P",
+    "category": "super",
+    "steps": [
+      {
+        "direction": 2
+      },
+      {
+        "direction": 1,
+        "optional": true
+      },
+      {
+        "direction": 4
+      },
+      {
+        "direction": 2
+      },
+      {
+        "direction": 1,
+        "optional": true
+      },
+      {
+        "direction": 4,
+        "anyButtons": [
+          "LP",
+          "MP",
+          "HP"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "blanka_sa3",
+    "characterId": "blanka",
+    "name": "SA3 グランドシェイブキャノンボール",
+    "notation": "236236K",
+    "category": "super",
+    "steps": [
+      {
+        "direction": 2
+      },
+      {
+        "direction": 3,
+        "optional": true
+      },
+      {
+        "direction": 6
+      },
+      {
+        "direction": 2
+      },
+      {
+        "direction": 3,
+        "optional": true
+      },
+      {
+        "direction": 6,
+        "anyButtons": [
+          "LK",
+          "MK",
+          "HK"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "dhalsim_yogafire",
+    "characterId": "dhalsim",
+    "name": "ヨガファイア",
+    "notation": "236P",
+    "category": "special",
+    "steps": [
+      {
+        "direction": 2
+      },
+      {
+        "direction": 3,
+        "optional": true
+      },
+      {
+        "direction": 6,
+        "anyButtons": [
+          "LP",
+          "MP",
+          "HP"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "dhalsim_yogaarch",
+    "characterId": "dhalsim",
+    "name": "ヨガアーチ",
+    "notation": "236K",
+    "category": "special",
+    "steps": [
+      {
+        "direction": 2
+      },
+      {
+        "direction": 3,
+        "optional": true
+      },
+      {
+        "direction": 6,
+        "anyButtons": [
+          "LK",
+          "MK",
+          "HK"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "dhalsim_yogaflame",
+    "characterId": "dhalsim",
+    "name": "ヨガフレイム",
+    "notation": "63214P",
+    "category": "special",
+    "steps": [
+      {
+        "direction": 6
+      },
+      {
+        "direction": 3,
+        "optional": true
+      },
+      {
+        "direction": 2
+      },
+      {
+        "direction": 1,
+        "optional": true
+      },
+      {
+        "direction": 4,
+        "anyButtons": [
+          "LP",
+          "MP",
+          "HP"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "dhalsim_yogablast",
+    "characterId": "dhalsim",
+    "name": "ヨガブラスト",
+    "notation": "63214K",
+    "category": "special",
+    "steps": [
+      {
+        "direction": 6
+      },
+      {
+        "direction": 3,
+        "optional": true
+      },
+      {
+        "direction": 2
+      },
+      {
+        "direction": 1,
+        "optional": true
+      },
+      {
+        "direction": 4,
+        "anyButtons": [
+          "LK",
+          "MK",
+          "HK"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "dhalsim_sa1",
+    "characterId": "dhalsim",
+    "name": "SA1 ヨガインフェルノ",
+    "notation": "236236P",
+    "category": "super",
+    "steps": [
+      {
+        "direction": 2
+      },
+      {
+        "direction": 3,
+        "optional": true
+      },
+      {
+        "direction": 6
+      },
+      {
+        "direction": 2
+      },
+      {
+        "direction": 3,
+        "optional": true
+      },
+      {
+        "direction": 6,
+        "anyButtons": [
+          "LP",
+          "MP",
+          "HP"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "dhalsim_sa2",
+    "characterId": "dhalsim",
+    "name": "SA2 ヨガサンバースト",
+    "notation": "214214K",
+    "category": "super",
+    "steps": [
+      {
+        "direction": 2
+      },
+      {
+        "direction": 1,
+        "optional": true
+      },
+      {
+        "direction": 4
+      },
+      {
+        "direction": 2
+      },
+      {
+        "direction": 1,
+        "optional": true
+      },
+      {
+        "direction": 4,
+        "anyButtons": [
+          "LK",
+          "MK",
+          "HK"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "dhalsim_sa3",
+    "characterId": "dhalsim",
+    "name": "SA3 ヨガマーシレス",
+    "notation": "236236K",
+    "category": "super",
+    "steps": [
+      {
+        "direction": 2
+      },
+      {
+        "direction": 3,
+        "optional": true
+      },
+      {
+        "direction": 6
+      },
+      {
+        "direction": 2
+      },
+      {
+        "direction": 3,
+        "optional": true
+      },
+      {
+        "direction": 6,
+        "anyButtons": [
+          "LK",
+          "MK",
+          "HK"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "ehonda_hyakuretsuharite",
+    "characterId": "ehonda",
+    "name": "百裂張り手",
+    "notation": "214P",
+    "category": "special",
+    "steps": [
+      {
+        "direction": 2
+      },
+      {
+        "direction": 1,
+        "optional": true
+      },
+      {
+        "direction": 4,
+        "anyButtons": [
+          "LP",
+          "MP",
+          "HP"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "ehonda_ohichonage",
+    "characterId": "ehonda",
+    "name": "大銀杏投げ",
+    "notation": "63214K",
+    "category": "special",
+    "steps": [
+      {
+        "direction": 6
+      },
+      {
+        "direction": 3,
+        "optional": true
+      },
+      {
+        "direction": 2
+      },
+      {
+        "direction": 1,
+        "optional": true
+      },
+      {
+        "direction": 4,
+        "anyButtons": [
+          "LK",
+          "MK",
+          "HK"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "ehonda_sumostep",
+    "characterId": "ehonda",
+    "name": "相撲ステップ",
+    "notation": "236K",
+    "category": "special",
+    "steps": [
+      {
+        "direction": 2
+      },
+      {
+        "direction": 3,
+        "optional": true
+      },
+      {
+        "direction": 6,
+        "anyButtons": [
+          "LK",
+          "MK",
+          "HK"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "ehonda_nekodamashi",
+    "characterId": "ehonda",
+    "name": "猫だまし",
+    "notation": "22P",
+    "category": "special",
+    "steps": [
+      {
+        "direction": 2
+      },
+      {
+        "direction": 2,
+        "anyButtons": [
+          "LP",
+          "MP",
+          "HP"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "ehonda_katairi",
+    "characterId": "ehonda",
+    "name": "肩屋入り",
+    "notation": "22K",
+    "category": "special",
+    "steps": [
+      {
+        "direction": 2
+      },
+      {
+        "direction": 2,
+        "anyButtons": [
+          "LK",
+          "MK",
+          "HK"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "ehonda_sa1",
+    "characterId": "ehonda",
+    "name": "SA1 発揮爆砕",
+    "notation": "236236P",
+    "category": "super",
+    "steps": [
+      {
+        "direction": 2
+      },
+      {
+        "direction": 3,
+        "optional": true
+      },
+      {
+        "direction": 6
+      },
+      {
+        "direction": 2
+      },
+      {
+        "direction": 3,
+        "optional": true
+      },
+      {
+        "direction": 6,
+        "anyButtons": [
+          "LP",
+          "MP",
+          "HP"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "ehonda_sa2",
+    "characterId": "ehonda",
+    "name": "SA2 千秋楽",
+    "notation": "214214P",
+    "category": "super",
+    "steps": [
+      {
+        "direction": 2
+      },
+      {
+        "direction": 1,
+        "optional": true
+      },
+      {
+        "direction": 4
+      },
+      {
+        "direction": 2
+      },
+      {
+        "direction": 1,
+        "optional": true
+      },
+      {
+        "direction": 4,
+        "anyButtons": [
+          "LP",
+          "MP",
+          "HP"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "deejay_fakerollstep",
+    "characterId": "deejay",
+    "name": "フェイクロールステップ",
+    "notation": "236LK",
+    "category": "special",
+    "steps": [
+      {
+        "direction": 2
+      },
+      {
+        "direction": 3,
+        "optional": true
+      },
+      {
+        "direction": 6,
+        "buttons": [
+          "LK"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "deejay_quickrollingsobat",
+    "characterId": "deejay",
+    "name": "クイックローリングソバット",
+    "notation": "236MK",
+    "category": "special",
+    "steps": [
+      {
+        "direction": 2
+      },
+      {
+        "direction": 3,
+        "optional": true
+      },
+      {
+        "direction": 6,
+        "buttons": [
+          "MK"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "deejay_doublerollingsobat",
+    "characterId": "deejay",
+    "name": "ダブルローリングソバット",
+    "notation": "236HK",
+    "category": "special",
+    "steps": [
+      {
+        "direction": 2
+      },
+      {
+        "direction": 3,
+        "optional": true
+      },
+      {
+        "direction": 6,
+        "buttons": [
+          "HK"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "deejay_machinegunupper",
+    "characterId": "deejay",
+    "name": "マシンガンアッパー",
+    "notation": "214P",
+    "category": "special",
+    "steps": [
+      {
+        "direction": 2
+      },
+      {
+        "direction": 1,
+        "optional": true
+      },
+      {
+        "direction": 4,
+        "anyButtons": [
+          "LP",
+          "MP",
+          "HP"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "deejay_josukuru",
+    "characterId": "deejay",
+    "name": "ジョスクール",
+    "notation": "214K",
+    "category": "special",
+    "steps": [
+      {
+        "direction": 2
+      },
+      {
+        "direction": 1,
+        "optional": true
+      },
+      {
+        "direction": 4,
+        "anyButtons": [
+          "LK",
+          "MK",
+          "HK"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "deejay_greatestsobat",
+    "characterId": "deejay",
+    "name": "グレイテストソバット",
+    "notation": "236236K",
+    "category": "special",
+    "steps": [
+      {
+        "direction": 2
+      },
+      {
+        "direction": 3,
+        "optional": true
+      },
+      {
+        "direction": 6
+      },
+      {
+        "direction": 2
+      },
+      {
+        "direction": 3,
+        "optional": true
+      },
+      {
+        "direction": 6,
+        "anyButtons": [
+          "LK",
+          "MK",
+          "HK"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "deejay_sa1",
+    "characterId": "deejay",
+    "name": "SA1 サンライズフェスティバル・ライト",
+    "notation": "236236LP",
+    "category": "super",
+    "steps": [
+      {
+        "direction": 2
+      },
+      {
+        "direction": 3,
+        "optional": true
+      },
+      {
+        "direction": 6
+      },
+      {
+        "direction": 2
+      },
+      {
+        "direction": 3,
+        "optional": true
+      },
+      {
+        "direction": 6,
+        "buttons": [
+          "LP"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "deejay_sa2",
+    "characterId": "deejay",
+    "name": "SA2 サンライズフェスティバル・マーベラス",
+    "notation": "236236MP",
+    "category": "super",
+    "steps": [
+      {
+        "direction": 2
+      },
+      {
+        "direction": 3,
+        "optional": true
+      },
+      {
+        "direction": 6
+      },
+      {
+        "direction": 2
+      },
+      {
+        "direction": 3,
+        "optional": true
+      },
+      {
+        "direction": 6,
+        "buttons": [
+          "MP"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "deejay_sa3",
+    "characterId": "deejay",
+    "name": "SA3 サンライズフェスティバル・マキシマム",
+    "notation": "236236HP",
+    "category": "super",
+    "steps": [
+      {
+        "direction": 2
+      },
+      {
+        "direction": 3,
+        "optional": true
+      },
+      {
+        "direction": 6
+      },
+      {
+        "direction": 2
+      },
+      {
+        "direction": 3,
+        "optional": true
+      },
+      {
+        "direction": 6,
+        "buttons": [
+          "HP"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "manon_manegesdrehe",
+    "characterId": "manon",
+    "name": "マネージュ・ドレ",
+    "notation": "63214P",
+    "category": "special",
+    "steps": [
+      {
+        "direction": 6
+      },
+      {
+        "direction": 3,
+        "optional": true
+      },
+      {
+        "direction": 2
+      },
+      {
+        "direction": 1,
+        "optional": true
+      },
+      {
+        "direction": 4,
+        "anyButtons": [
+          "LP",
+          "MP",
+          "HP"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "manon_rondpoint",
+    "characterId": "manon",
+    "name": "ロン・ポワン",
+    "notation": "236K",
+    "category": "special",
+    "steps": [
+      {
+        "direction": 2
+      },
+      {
+        "direction": 3,
+        "optional": true
+      },
+      {
+        "direction": 6,
+        "anyButtons": [
+          "LK",
+          "MK",
+          "HK"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "manon_degage",
+    "characterId": "manon",
+    "name": "デガジェ",
+    "notation": "214K",
+    "category": "special",
+    "steps": [
+      {
+        "direction": 2
+      },
+      {
+        "direction": 1,
+        "optional": true
+      },
+      {
+        "direction": 4,
+        "anyButtons": [
+          "LK",
+          "MK",
+          "HK"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "manon_renverse",
+    "characterId": "manon",
+    "name": "ランヴェルセ",
+    "notation": "236P",
+    "category": "special",
+    "steps": [
+      {
+        "direction": 2
+      },
+      {
+        "direction": 3,
+        "optional": true
+      },
+      {
+        "direction": 6,
+        "anyButtons": [
+          "LP",
+          "MP",
+          "HP"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "manon_sa1",
+    "characterId": "manon",
+    "name": "SA1 アラベスク",
+    "notation": "236236K",
+    "category": "super",
+    "steps": [
+      {
+        "direction": 2
+      },
+      {
+        "direction": 3,
+        "optional": true
+      },
+      {
+        "direction": 6
+      },
+      {
+        "direction": 2
+      },
+      {
+        "direction": 3,
+        "optional": true
+      },
+      {
+        "direction": 6,
+        "anyButtons": [
+          "LK",
+          "MK",
+          "HK"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "manon_sa2",
+    "characterId": "manon",
+    "name": "SA2 エトワール",
+    "notation": "214214K",
+    "category": "super",
+    "steps": [
+      {
+        "direction": 2
+      },
+      {
+        "direction": 1,
+        "optional": true
+      },
+      {
+        "direction": 4
+      },
+      {
+        "direction": 2
+      },
+      {
+        "direction": 1,
+        "optional": true
+      },
+      {
+        "direction": 4,
+        "anyButtons": [
+          "LK",
+          "MK",
+          "HK"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "manon_sa3",
+    "characterId": "manon",
+    "name": "SA3 パ・ド・ドゥ",
+    "notation": "236236P",
+    "category": "super",
+    "steps": [
+      {
+        "direction": 2
+      },
+      {
+        "direction": 3,
+        "optional": true
+      },
+      {
+        "direction": 6
+      },
+      {
+        "direction": 2
+      },
+      {
+        "direction": 3,
+        "optional": true
+      },
+      {
+        "direction": 6,
+        "anyButtons": [
+          "LP",
+          "MP",
+          "HP"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "marisa_gladius",
+    "characterId": "marisa",
+    "name": "グラディウス",
+    "notation": "236P",
+    "category": "special",
+    "steps": [
+      {
+        "direction": 2
+      },
+      {
+        "direction": 3,
+        "optional": true
+      },
+      {
+        "direction": 6,
+        "anyButtons": [
+          "LP",
+          "MP",
+          "HP"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "marisa_dimachaerus",
+    "characterId": "marisa",
+    "name": "ディマカイルス",
+    "notation": "214P",
+    "category": "special",
+    "steps": [
+      {
+        "direction": 2
+      },
+      {
+        "direction": 1,
+        "optional": true
+      },
+      {
+        "direction": 4,
+        "anyButtons": [
+          "LP",
+          "MP",
+          "HP"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "marisa_phalanx",
+    "characterId": "marisa",
+    "name": "ファランクス",
+    "notation": "623P",
+    "category": "special",
+    "steps": [
+      {
+        "direction": 6
+      },
+      {
+        "direction": 2
+      },
+      {
+        "direction": 3,
+        "anyButtons": [
+          "LP",
+          "MP",
+          "HP"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "marisa_quadriga",
+    "characterId": "marisa",
+    "name": "クアドリガ",
+    "notation": "236K",
+    "category": "special",
+    "steps": [
+      {
+        "direction": 2
+      },
+      {
+        "direction": 3,
+        "optional": true
+      },
+      {
+        "direction": 6,
+        "anyButtons": [
+          "LK",
+          "MK",
+          "HK"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "marisa_scutum",
+    "characterId": "marisa",
+    "name": "スクトゥム",
+    "notation": "214K",
+    "category": "special",
+    "steps": [
+      {
+        "direction": 2
+      },
+      {
+        "direction": 1,
+        "optional": true
+      },
+      {
+        "direction": 4,
+        "anyButtons": [
+          "LK",
+          "MK",
+          "HK"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "marisa_enfold",
+    "characterId": "marisa",
+    "name": "エンフォルド",
+    "notation": "LP+LK",
+    "category": "special",
+    "steps": [
+      {
+        "buttons": [
+          "LP",
+          "LK"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "marisa_sa1",
+    "characterId": "marisa",
+    "name": "SA1 マリーザジャベリン",
+    "notation": "236236P",
+    "category": "super",
+    "steps": [
+      {
+        "direction": 2
+      },
+      {
+        "direction": 3,
+        "optional": true
+      },
+      {
+        "direction": 6
+      },
+      {
+        "direction": 2
+      },
+      {
+        "direction": 3,
+        "optional": true
+      },
+      {
+        "direction": 6,
+        "anyButtons": [
+          "LP",
+          "MP",
+          "HP"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "marisa_sa2",
+    "characterId": "marisa",
+    "name": "SA2 メテオリティス",
+    "notation": "214214P",
+    "category": "super",
+    "steps": [
+      {
+        "direction": 2
+      },
+      {
+        "direction": 1,
+        "optional": true
+      },
+      {
+        "direction": 4
+      },
+      {
+        "direction": 2
+      },
+      {
+        "direction": 1,
+        "optional": true
+      },
+      {
+        "direction": 4,
+        "anyButtons": [
+          "LP",
+          "MP",
+          "HP"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "marisa_sa3",
+    "characterId": "marisa",
+    "name": "SA3 アポロウーサ",
+    "notation": "236236K",
+    "category": "super",
+    "steps": [
+      {
+        "direction": 2
+      },
+      {
+        "direction": 3,
+        "optional": true
+      },
+      {
+        "direction": 6
+      },
+      {
+        "direction": 2
+      },
+      {
+        "direction": 3,
+        "optional": true
+      },
+      {
+        "direction": 6,
+        "anyButtons": [
+          "LK",
+          "MK",
+          "HK"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "jp_triglav",
+    "characterId": "jp",
+    "name": "トリグラフ",
+    "notation": "22P",
+    "category": "special",
+    "steps": [
+      {
+        "direction": 2
+      },
+      {
+        "direction": 2,
+        "anyButtons": [
+          "LP",
+          "MP",
+          "HP"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "jp_stribog",
+    "characterId": "jp",
+    "name": "ストリボーグ",
+    "notation": "236P",
+    "category": "special",
+    "steps": [
+      {
+        "direction": 2
+      },
+      {
+        "direction": 3,
+        "optional": true
+      },
+      {
+        "direction": 6,
+        "anyButtons": [
+          "LP",
+          "MP",
+          "HP"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "jp_veiehat",
+    "characterId": "jp",
+    "name": "ヴィーハト",
+    "notation": "214P",
+    "category": "special",
+    "steps": [
+      {
+        "direction": 2
+      },
+      {
+        "direction": 1,
+        "optional": true
+      },
+      {
+        "direction": 4,
+        "anyButtons": [
+          "LP",
+          "MP",
+          "HP"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "jp_amnesia",
+    "characterId": "jp",
+    "name": "アムネジア",
+    "notation": "22K",
+    "category": "special",
+    "steps": [
+      {
+        "direction": 2
+      },
+      {
+        "direction": 2,
+        "anyButtons": [
+          "LK",
+          "MK",
+          "HK"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "jp_torbalan",
+    "characterId": "jp",
+    "name": "トルバラン",
+    "notation": "236K",
+    "category": "special",
+    "steps": [
+      {
+        "direction": 2
+      },
+      {
+        "direction": 3,
+        "optional": true
+      },
+      {
+        "direction": 6,
+        "anyButtons": [
+          "LK",
+          "MK",
+          "HK"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "jp_abnymarch",
+    "characterId": "jp",
+    "name": "アブニマーチ",
+    "notation": "214K",
+    "category": "special",
+    "steps": [
+      {
+        "direction": 2
+      },
+      {
+        "direction": 1,
+        "optional": true
+      },
+      {
+        "direction": 4,
+        "anyButtons": [
+          "LK",
+          "MK",
+          "HK"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "jp_sa1",
+    "characterId": "jp",
+    "name": "SA1 チェルノボーグ",
+    "notation": "236236P",
+    "category": "super",
+    "steps": [
+      {
+        "direction": 2
+      },
+      {
+        "direction": 3,
+        "optional": true
+      },
+      {
+        "direction": 6
+      },
+      {
+        "direction": 2
+      },
+      {
+        "direction": 3,
+        "optional": true
+      },
+      {
+        "direction": 6,
+        "anyButtons": [
+          "LP",
+          "MP",
+          "HP"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "jp_sa2",
+    "characterId": "jp",
+    "name": "SA2 ラヴーシュカ",
+    "notation": "214214P",
+    "category": "super",
+    "steps": [
+      {
+        "direction": 2
+      },
+      {
+        "direction": 1,
+        "optional": true
+      },
+      {
+        "direction": 4
+      },
+      {
+        "direction": 2
+      },
+      {
+        "direction": 1,
+        "optional": true
+      },
+      {
+        "direction": 4,
+        "anyButtons": [
+          "LP",
+          "MP",
+          "HP"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "jp_sa3",
+    "characterId": "jp",
+    "name": "SA3 ザプリェット",
+    "notation": "236236K",
+    "category": "super",
+    "steps": [
+      {
+        "direction": 2
+      },
+      {
+        "direction": 3,
+        "optional": true
+      },
+      {
+        "direction": 6
+      },
+      {
+        "direction": 2
+      },
+      {
+        "direction": 3,
+        "optional": true
+      },
+      {
+        "direction": 6,
+        "anyButtons": [
+          "LK",
+          "MK",
+          "HK"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "zangief_russiansuplex",
+    "characterId": "zangief",
+    "name": "ロシアンスープレックス",
+    "notation": "63214K",
+    "category": "special",
+    "steps": [
+      {
+        "direction": 6
+      },
+      {
+        "direction": 3,
+        "optional": true
+      },
+      {
+        "direction": 2
+      },
+      {
+        "direction": 1,
+        "optional": true
+      },
+      {
+        "direction": 4,
+        "anyButtons": [
+          "LK",
+          "MK",
+          "HK"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "zangief_tundrastorm",
+    "characterId": "zangief",
+    "name": "ツンドラストーム",
+    "notation": "22HK",
+    "category": "special",
+    "steps": [
+      {
+        "direction": 2
+      },
+      {
+        "direction": 2,
+        "anyButtons": [
+          "HK"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "zangief_sa1",
+    "characterId": "zangief",
+    "name": "SA1 エリアルロシアンスラム",
+    "notation": "236236K",
+    "category": "super",
+    "steps": [
+      {
+        "direction": 2
+      },
+      {
+        "direction": 3,
+        "optional": true
+      },
+      {
+        "direction": 6
+      },
+      {
+        "direction": 2
+      },
+      {
+        "direction": 3,
+        "optional": true
+      },
+      {
+        "direction": 6,
+        "anyButtons": [
+          "LK",
+          "MK",
+          "HK"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "zangief_sa2",
+    "characterId": "zangief",
+    "name": "SA2 サイクロンラリアット",
+    "notation": "236236P",
+    "category": "super",
+    "steps": [
+      {
+        "direction": 2
+      },
+      {
+        "direction": 3,
+        "optional": true
+      },
+      {
+        "direction": 6
+      },
+      {
+        "direction": 2
+      },
+      {
+        "direction": 3,
+        "optional": true
+      },
+      {
+        "direction": 6,
+        "anyButtons": [
+          "LP",
+          "MP",
+          "HP"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "lily_condorwind",
+    "characterId": "lily",
+    "name": "コンドルウィンド",
+    "notation": "214P",
+    "category": "special",
+    "steps": [
+      {
+        "direction": 2
+      },
+      {
+        "direction": 1,
+        "optional": true
+      },
+      {
+        "direction": 4,
+        "anyButtons": [
+          "LP",
+          "MP",
+          "HP"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "lily_condorspire",
+    "characterId": "lily",
+    "name": "コンドルスパイア",
+    "notation": "236K",
+    "category": "special",
+    "steps": [
+      {
+        "direction": 2
+      },
+      {
+        "direction": 3,
+        "optional": true
+      },
+      {
+        "direction": 6,
+        "anyButtons": [
+          "LK",
+          "MK",
+          "HK"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "lily_tomahawkbuster",
+    "characterId": "lily",
+    "name": "トマホークバスター",
+    "notation": "623P",
+    "category": "special",
+    "steps": [
+      {
+        "direction": 6
+      },
+      {
+        "direction": 2
+      },
+      {
+        "direction": 3,
+        "anyButtons": [
+          "LP",
+          "MP",
+          "HP"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "lily_sa1",
+    "characterId": "lily",
+    "name": "SA1 ブリージングホーク",
+    "notation": "236236P",
+    "category": "super",
+    "steps": [
+      {
+        "direction": 2
+      },
+      {
+        "direction": 3,
+        "optional": true
+      },
+      {
+        "direction": 6
+      },
+      {
+        "direction": 2
+      },
+      {
+        "direction": 3,
+        "optional": true
+      },
+      {
+        "direction": 6,
+        "anyButtons": [
+          "LP",
+          "MP",
+          "HP"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "lily_sa2",
+    "characterId": "lily",
+    "name": "SA2 サンダーバード",
+    "notation": "236236K",
+    "category": "super",
+    "steps": [
+      {
+        "direction": 2
+      },
+      {
+        "direction": 3,
+        "optional": true
+      },
+      {
+        "direction": 6
+      },
+      {
+        "direction": 2
+      },
+      {
+        "direction": 3,
+        "optional": true
+      },
+      {
+        "direction": 6,
+        "anyButtons": [
+          "LK",
+          "MK",
+          "HK"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "lily_sa3",
+    "characterId": "lily",
+    "name": "SA3 レイジングタイフーン",
+    "notation": "214214P",
+    "category": "super",
+    "steps": [
+      {
+        "direction": 2
+      },
+      {
+        "direction": 1,
+        "optional": true
+      },
+      {
+        "direction": 4
+      },
+      {
+        "direction": 2
+      },
+      {
+        "direction": 1,
+        "optional": true
+      },
+      {
+        "direction": 4,
+        "anyButtons": [
+          "LP",
+          "MP",
+          "HP"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "cammy_spiralarrow",
+    "characterId": "cammy",
+    "name": "スパイラルアロー",
+    "notation": "236K",
+    "category": "special",
+    "steps": [
+      {
+        "direction": 2
+      },
+      {
+        "direction": 3,
+        "optional": true
+      },
+      {
+        "direction": 6,
+        "anyButtons": [
+          "LK",
+          "MK",
+          "HK"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "cammy_cannonspike",
+    "characterId": "cammy",
+    "name": "キャノンスパイク",
+    "notation": "623K",
+    "category": "special",
+    "steps": [
+      {
+        "direction": 6
+      },
+      {
+        "direction": 2
+      },
+      {
+        "direction": 3,
+        "anyButtons": [
+          "LK",
+          "MK",
+          "HK"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "cammy_axelspinknuckle",
+    "characterId": "cammy",
+    "name": "アクセルスピンナックル",
+    "notation": "214P",
+    "category": "special",
+    "steps": [
+      {
+        "direction": 2
+      },
+      {
+        "direction": 1,
+        "optional": true
+      },
+      {
+        "direction": 4,
+        "anyButtons": [
+          "LP",
+          "MP",
+          "HP"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "cammy_cannonstrike",
+    "characterId": "cammy",
+    "name": "キャノンストライク",
+    "notation": "214K",
+    "category": "special",
+    "steps": [
+      {
+        "direction": 2
+      },
+      {
+        "direction": 1,
+        "optional": true
+      },
+      {
+        "direction": 4,
+        "anyButtons": [
+          "LK",
+          "MK",
+          "HK"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "cammy_hooligancombination",
+    "characterId": "cammy",
+    "name": "フーリガンコンビネーション",
+    "notation": "236P",
+    "category": "special",
+    "steps": [
+      {
+        "direction": 2
+      },
+      {
+        "direction": 3,
+        "optional": true
+      },
+      {
+        "direction": 6,
+        "anyButtons": [
+          "LP",
+          "MP",
+          "HP"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "cammy_sa1",
+    "characterId": "cammy",
+    "name": "SA1 キラービースピン",
+    "notation": "214214P",
+    "category": "super",
+    "steps": [
+      {
+        "direction": 2
+      },
+      {
+        "direction": 1,
+        "optional": true
+      },
+      {
+        "direction": 4
+      },
+      {
+        "direction": 2
+      },
+      {
+        "direction": 1,
+        "optional": true
+      },
+      {
+        "direction": 4,
+        "anyButtons": [
+          "LP",
+          "MP",
+          "HP"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "cammy_sa2",
+    "characterId": "cammy",
+    "name": "SA2 スピンドライブスマッシャー",
+    "notation": "236236K",
+    "category": "super",
+    "steps": [
+      {
+        "direction": 2
+      },
+      {
+        "direction": 3,
+        "optional": true
+      },
+      {
+        "direction": 6
+      },
+      {
+        "direction": 2
+      },
+      {
+        "direction": 3,
+        "optional": true
+      },
+      {
+        "direction": 6,
+        "anyButtons": [
+          "LK",
+          "MK",
+          "HK"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "cammy_sa3",
+    "characterId": "cammy",
+    "name": "SA3 デルタレッドアサルト",
+    "notation": "236236P",
+    "category": "super",
+    "steps": [
+      {
+        "direction": 2
+      },
+      {
+        "direction": 3,
+        "optional": true
+      },
+      {
+        "direction": 6
+      },
+      {
+        "direction": 2
+      },
+      {
+        "direction": 3,
+        "optional": true
+      },
+      {
+        "direction": 6,
+        "anyButtons": [
+          "LP",
+          "MP",
+          "HP"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "rashid_spinningmixer",
+    "characterId": "rashid",
+    "name": "スピニング・ミキサー",
+    "notation": "236P",
+    "category": "special",
+    "steps": [
+      {
+        "direction": 2
+      },
+      {
+        "direction": 3,
+        "optional": true
+      },
+      {
+        "direction": 6,
+        "anyButtons": [
+          "LP",
+          "MP",
+          "HP"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "rashid_eaglespike",
+    "characterId": "rashid",
+    "name": "イーグル・スパイク",
+    "notation": "214K",
+    "category": "special",
+    "steps": [
+      {
+        "direction": 2
+      },
+      {
+        "direction": 1,
+        "optional": true
+      },
+      {
+        "direction": 4,
+        "anyButtons": [
+          "LK",
+          "MK",
+          "HK"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "rashid_whirlwindshot",
+    "characterId": "rashid",
+    "name": "ワールウインド・ショット",
+    "notation": "236K",
+    "category": "special",
+    "steps": [
+      {
+        "direction": 2
+      },
+      {
+        "direction": 3,
+        "optional": true
+      },
+      {
+        "direction": 6,
+        "anyButtons": [
+          "LK",
+          "MK",
+          "HK"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "rashid_arabiancyclone",
+    "characterId": "rashid",
+    "name": "アラビアン・サイクロン",
+    "notation": "214P",
+    "category": "special",
+    "steps": [
+      {
+        "direction": 2
+      },
+      {
+        "direction": 1,
+        "optional": true
+      },
+      {
+        "direction": 4,
+        "anyButtons": [
+          "LP",
+          "MP",
+          "HP"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "rashid_sa1",
+    "characterId": "rashid",
+    "name": "SA1 スーパー・ラシード・キック",
+    "notation": "236236K",
+    "category": "super",
+    "steps": [
+      {
+        "direction": 2
+      },
+      {
+        "direction": 3,
+        "optional": true
+      },
+      {
+        "direction": 6
+      },
+      {
+        "direction": 2
+      },
+      {
+        "direction": 3,
+        "optional": true
+      },
+      {
+        "direction": 6,
+        "anyButtons": [
+          "LK",
+          "MK",
+          "HK"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "rashid_sa2",
+    "characterId": "rashid",
+    "name": "SA2 イウサール",
+    "notation": "214214K",
+    "category": "super",
+    "steps": [
+      {
+        "direction": 2
+      },
+      {
+        "direction": 1,
+        "optional": true
+      },
+      {
+        "direction": 4
+      },
+      {
+        "direction": 2
+      },
+      {
+        "direction": 1,
+        "optional": true
+      },
+      {
+        "direction": 4,
+        "anyButtons": [
+          "LK",
+          "MK",
+          "HK"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "rashid_sa3",
+    "characterId": "rashid",
+    "name": "SA3 アルタイル",
+    "notation": "236236P",
+    "category": "super",
+    "steps": [
+      {
+        "direction": 2
+      },
+      {
+        "direction": 3,
+        "optional": true
+      },
+      {
+        "direction": 6
+      },
+      {
+        "direction": 2
+      },
+      {
+        "direction": 3,
+        "optional": true
+      },
+      {
+        "direction": 6,
+        "anyButtons": [
+          "LP",
+          "MP",
+          "HP"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "aki_shienhou",
+    "characterId": "aki",
+    "name": "紫煙砲",
+    "notation": "214LP",
+    "category": "special",
+    "steps": [
+      {
+        "direction": 2
+      },
+      {
+        "direction": 1,
+        "optional": true
+      },
+      {
+        "direction": 4,
+        "anyButtons": [
+          "LP"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "aki_shihousen",
+    "characterId": "aki",
+    "name": "紫泡泉",
+    "notation": "214MP",
+    "category": "special",
+    "steps": [
+      {
+        "direction": 2
+      },
+      {
+        "direction": 1,
+        "optional": true
+      },
+      {
+        "direction": 4,
+        "anyButtons": [
+          "MP"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "aki_shihousan",
+    "characterId": "aki",
+    "name": "紫泡撒",
+    "notation": "214HP",
+    "category": "special",
+    "steps": [
+      {
+        "direction": 2
+      },
+      {
+        "direction": 1,
+        "optional": true
+      },
+      {
+        "direction": 4,
+        "anyButtons": [
+          "HP"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "aki_jatouben",
+    "characterId": "aki",
+    "name": "蛇頭鞭",
+    "notation": "236P",
+    "category": "special",
+    "steps": [
+      {
+        "direction": 2
+      },
+      {
+        "direction": 3,
+        "optional": true
+      },
+      {
+        "direction": 6,
+        "anyButtons": [
+          "LP",
+          "MP",
+          "HP"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "aki_kyoushuutotsu",
+    "characterId": "aki",
+    "name": "凶襲突",
+    "notation": "214K",
+    "category": "special",
+    "steps": [
+      {
+        "direction": 2
+      },
+      {
+        "direction": 1,
+        "optional": true
+      },
+      {
+        "direction": 4,
+        "anyButtons": [
+          "LK",
+          "MK",
+          "HK"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "aki_jakeikou",
+    "characterId": "aki",
+    "name": "蛇軽功",
+    "notation": "236K",
+    "category": "special",
+    "steps": [
+      {
+        "direction": 2
+      },
+      {
+        "direction": 3,
+        "optional": true
+      },
+      {
+        "direction": 6,
+        "anyButtons": [
+          "LK",
+          "MK",
+          "HK"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "aki_sa1",
+    "characterId": "aki",
+    "name": "SA1 死屍累々",
+    "notation": "236236K",
+    "category": "super",
+    "steps": [
+      {
+        "direction": 2
+      },
+      {
+        "direction": 3,
+        "optional": true
+      },
+      {
+        "direction": 6
+      },
+      {
+        "direction": 2
+      },
+      {
+        "direction": 3,
+        "optional": true
+      },
+      {
+        "direction": 6,
+        "anyButtons": [
+          "LK",
+          "MK",
+          "HK"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "aki_sa2",
+    "characterId": "aki",
+    "name": "SA2 紫煙裂爪",
+    "notation": "214214P",
+    "category": "super",
+    "steps": [
+      {
+        "direction": 2
+      },
+      {
+        "direction": 1,
+        "optional": true
+      },
+      {
+        "direction": 4
+      },
+      {
+        "direction": 2
+      },
+      {
+        "direction": 1,
+        "optional": true
+      },
+      {
+        "direction": 4,
+        "anyButtons": [
+          "LP",
+          "MP",
+          "HP"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "aki_sa3",
+    "characterId": "aki",
+    "name": "SA3 睚眦",
+    "notation": "236236P",
+    "category": "super",
+    "steps": [
+      {
+        "direction": 2
+      },
+      {
+        "direction": 3,
+        "optional": true
+      },
+      {
+        "direction": 6
+      },
+      {
+        "direction": 2
+      },
+      {
+        "direction": 3,
+        "optional": true
+      },
+      {
+        "direction": 6,
+        "anyButtons": [
+          "LP",
+          "MP",
+          "HP"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "ed_psychospark",
+    "characterId": "ed",
+    "name": "サイコスパーク",
+    "notation": "236P",
+    "category": "special",
+    "steps": [
+      {
+        "direction": 2
+      },
+      {
+        "direction": 3,
+        "optional": true
+      },
+      {
+        "direction": 6,
+        "anyButtons": [
+          "LP",
+          "MP",
+          "HP"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "ed_psychoupper",
+    "characterId": "ed",
+    "name": "サイコアッパー",
+    "notation": "623P",
+    "category": "special",
+    "steps": [
+      {
+        "direction": 6
+      },
+      {
+        "direction": 2
+      },
+      {
+        "direction": 3,
+        "anyButtons": [
+          "LP",
+          "MP",
+          "HP"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "ed_psychoblitz",
+    "characterId": "ed",
+    "name": "サイコブリッツ",
+    "notation": "214P",
+    "category": "special",
+    "steps": [
+      {
+        "direction": 2
+      },
+      {
+        "direction": 1,
+        "optional": true
+      },
+      {
+        "direction": 4,
+        "anyButtons": [
+          "LP",
+          "MP",
+          "HP"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "ed_psychoflicker",
+    "characterId": "ed",
+    "name": "サイコフリッカー",
+    "notation": "236K",
+    "category": "special",
+    "steps": [
+      {
+        "direction": 2
+      },
+      {
+        "direction": 3,
+        "optional": true
+      },
+      {
+        "direction": 6,
+        "anyButtons": [
+          "LK",
+          "MK",
+          "HK"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "ed_sa1",
+    "characterId": "ed",
+    "name": "SA1 サイコストーム",
+    "notation": "236236K",
+    "category": "super",
+    "steps": [
+      {
+        "direction": 2
+      },
+      {
+        "direction": 3,
+        "optional": true
+      },
+      {
+        "direction": 6
+      },
+      {
+        "direction": 2
+      },
+      {
+        "direction": 3,
+        "optional": true
+      },
+      {
+        "direction": 6,
+        "anyButtons": [
+          "LK",
+          "MK",
+          "HK"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "ed_sa2",
+    "characterId": "ed",
+    "name": "SA2 サイコキャノン",
+    "notation": "214214P",
+    "category": "super",
+    "steps": [
+      {
+        "direction": 2
+      },
+      {
+        "direction": 1,
+        "optional": true
+      },
+      {
+        "direction": 4
+      },
+      {
+        "direction": 2
+      },
+      {
+        "direction": 1,
+        "optional": true
+      },
+      {
+        "direction": 4,
+        "anyButtons": [
+          "LP",
+          "MP",
+          "HP"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "ed_sa3",
+    "characterId": "ed",
+    "name": "SA3 サイコチェンバー",
+    "notation": "236236P",
+    "category": "super",
+    "steps": [
+      {
+        "direction": 2
+      },
+      {
+        "direction": 3,
+        "optional": true
+      },
+      {
+        "direction": 6
+      },
+      {
+        "direction": 2
+      },
+      {
+        "direction": 3,
+        "optional": true
+      },
+      {
+        "direction": 6,
+        "anyButtons": [
+          "LP",
+          "MP",
+          "HP"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "terry_powerwave",
+    "characterId": "terry",
+    "name": "パワーウェイブ",
+    "notation": "236LP/MP",
+    "category": "special",
+    "steps": [
+      {
+        "direction": 2
+      },
+      {
+        "direction": 3,
+        "optional": true
+      },
+      {
+        "direction": 6,
+        "anyButtons": [
+          "LP",
+          "MP"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "terry_roundwave",
+    "characterId": "terry",
+    "name": "ラウンドウェイブ",
+    "notation": "236HP",
+    "category": "special",
+    "steps": [
+      {
+        "direction": 2
+      },
+      {
+        "direction": 3,
+        "optional": true
+      },
+      {
+        "direction": 6,
+        "anyButtons": [
+          "HP"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "terry_quickburn",
+    "characterId": "terry",
+    "name": "クイックバーン",
+    "notation": "214LP",
+    "category": "special",
+    "steps": [
+      {
+        "direction": 2
+      },
+      {
+        "direction": 1,
+        "optional": true
+      },
+      {
+        "direction": 4,
+        "anyButtons": [
+          "LP"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "terry_burnknuckle",
+    "characterId": "terry",
+    "name": "バーンナックル",
+    "notation": "214MP/HP",
+    "category": "special",
+    "steps": [
+      {
+        "direction": 2
+      },
+      {
+        "direction": 1,
+        "optional": true
+      },
+      {
+        "direction": 4,
+        "anyButtons": [
+          "MP",
+          "HP"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "terry_powercharge",
+    "characterId": "terry",
+    "name": "パワーチャージ",
+    "notation": "236K",
+    "category": "special",
+    "steps": [
+      {
+        "direction": 2
+      },
+      {
+        "direction": 3,
+        "optional": true
+      },
+      {
+        "direction": 6,
+        "anyButtons": [
+          "LK",
+          "MK",
+          "HK"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "terry_crackshoot",
+    "characterId": "terry",
+    "name": "クラックシュート",
+    "notation": "214K",
+    "category": "special",
+    "steps": [
+      {
+        "direction": 2
+      },
+      {
+        "direction": 1,
+        "optional": true
+      },
+      {
+        "direction": 4,
+        "anyButtons": [
+          "LK",
+          "MK",
+          "HK"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "terry_risingtackle",
+    "characterId": "terry",
+    "name": "ライジングタックル",
+    "notation": "623P",
+    "category": "special",
+    "steps": [
+      {
+        "direction": 6
+      },
+      {
+        "direction": 2
+      },
+      {
+        "direction": 3,
+        "anyButtons": [
+          "LP",
+          "MP",
+          "HP"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "terry_sa1",
+    "characterId": "terry",
+    "name": "SA1 バスターウルフ",
+    "notation": "236236K",
+    "category": "super",
+    "steps": [
+      {
+        "direction": 2
+      },
+      {
+        "direction": 3,
+        "optional": true
+      },
+      {
+        "direction": 6
+      },
+      {
+        "direction": 2
+      },
+      {
+        "direction": 3,
+        "optional": true
+      },
+      {
+        "direction": 6,
+        "anyButtons": [
+          "LK",
+          "MK",
+          "HK"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "terry_sa2",
+    "characterId": "terry",
+    "name": "SA2 パワーゲイザー",
+    "notation": "214214P",
+    "category": "super",
+    "steps": [
+      {
+        "direction": 2
+      },
+      {
+        "direction": 1,
+        "optional": true
+      },
+      {
+        "direction": 4
+      },
+      {
+        "direction": 2
+      },
+      {
+        "direction": 1,
+        "optional": true
+      },
+      {
+        "direction": 4,
+        "anyButtons": [
+          "LP",
+          "MP",
+          "HP"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "terry_sa3",
+    "characterId": "terry",
+    "name": "SA3 ライジングファング",
+    "notation": "236236P",
+    "category": "super",
+    "steps": [
+      {
+        "direction": 2
+      },
+      {
+        "direction": 3,
+        "optional": true
+      },
+      {
+        "direction": 6
+      },
+      {
+        "direction": 2
+      },
+      {
+        "direction": 3,
+        "optional": true
+      },
+      {
+        "direction": 6,
+        "anyButtons": [
+          "LP",
+          "MP",
+          "HP"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "mai_kachousen",
+    "characterId": "mai",
+    "name": "花蝶扇",
+    "notation": "236P",
+    "category": "special",
+    "steps": [
+      {
+        "direction": 2
+      },
+      {
+        "direction": 3,
+        "optional": true
+      },
+      {
+        "direction": 6,
+        "anyButtons": [
+          "LP",
+          "MP",
+          "HP"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "mai_ryuenmai",
+    "characterId": "mai",
+    "name": "龍炎舞",
+    "notation": "214P",
+    "category": "special",
+    "steps": [
+      {
+        "direction": 2
+      },
+      {
+        "direction": 1,
+        "optional": true
+      },
+      {
+        "direction": 4,
+        "anyButtons": [
+          "LP",
+          "MP",
+          "HP"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "mai_ninpou",
+    "characterId": "mai",
+    "name": "必殺忍蜂",
+    "notation": "236K",
+    "category": "special",
+    "steps": [
+      {
+        "direction": 2
+      },
+      {
+        "direction": 3,
+        "optional": true
+      },
+      {
+        "direction": 6,
+        "anyButtons": [
+          "LK",
+          "MK",
+          "HK"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "mai_hishouryuenjin",
+    "characterId": "mai",
+    "name": "飛翔龍炎陣",
+    "notation": "623K",
+    "category": "special",
+    "steps": [
+      {
+        "direction": 6
+      },
+      {
+        "direction": 2
+      },
+      {
+        "direction": 3,
+        "anyButtons": [
+          "LK",
+          "MK",
+          "HK"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "mai_musasabi",
+    "characterId": "mai",
+    "name": "ムササビの舞",
+    "notation": "214P",
+    "category": "special",
+    "steps": [
+      {
+        "direction": 2
+      },
+      {
+        "direction": 1,
+        "optional": true
+      },
+      {
+        "direction": 4,
+        "anyButtons": [
+          "LP",
+          "MP",
+          "HP"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "mai_sa1",
+    "characterId": "mai",
+    "name": "SA1 陽炎の舞",
+    "notation": "236236P",
+    "category": "super",
+    "steps": [
+      {
+        "direction": 2
+      },
+      {
+        "direction": 3,
+        "optional": true
+      },
+      {
+        "direction": 6
+      },
+      {
+        "direction": 2
+      },
+      {
+        "direction": 3,
+        "optional": true
+      },
+      {
+        "direction": 6,
+        "anyButtons": [
+          "LP",
+          "MP",
+          "HP"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "mai_sa2",
+    "characterId": "mai",
+    "name": "SA2 超必殺忍蜂",
+    "notation": "236236K",
+    "category": "super",
+    "steps": [
+      {
+        "direction": 2
+      },
+      {
+        "direction": 3,
+        "optional": true
+      },
+      {
+        "direction": 6
+      },
+      {
+        "direction": 2
+      },
+      {
+        "direction": 3,
+        "optional": true
+      },
+      {
+        "direction": 6,
+        "anyButtons": [
+          "LK",
+          "MK",
+          "HK"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "mai_sa3",
+    "characterId": "mai",
+    "name": "SA3 不知火流・炎舞仇桜",
+    "notation": "214214P",
+    "category": "super",
+    "steps": [
+      {
+        "direction": 2
+      },
+      {
+        "direction": 1,
+        "optional": true
+      },
+      {
+        "direction": 4
+      },
+      {
+        "direction": 2
+      },
+      {
+        "direction": 1,
+        "optional": true
+      },
+      {
+        "direction": 4,
+        "anyButtons": [
+          "LP",
+          "MP",
+          "HP"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "elena_rhinohorn",
+    "characterId": "elena",
+    "name": "ライノホーン",
+    "notation": "236K",
+    "category": "special",
+    "steps": [
+      {
+        "direction": 2
+      },
+      {
+        "direction": 3,
+        "optional": true
+      },
+      {
+        "direction": 6,
+        "anyButtons": [
+          "LK",
+          "MK",
+          "HK"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "elena_scratchwheel",
+    "characterId": "elena",
+    "name": "スクラッチホイール",
+    "notation": "623K",
+    "category": "special",
+    "steps": [
+      {
+        "direction": 6
+      },
+      {
+        "direction": 2
+      },
+      {
+        "direction": 3,
+        "anyButtons": [
+          "LK",
+          "MK",
+          "HK"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "elena_ringsing",
+    "characterId": "elena",
+    "name": "リンクシング",
+    "notation": "236P",
+    "category": "special",
+    "steps": [
+      {
+        "direction": 2
+      },
+      {
+        "direction": 3,
+        "optional": true
+      },
+      {
+        "direction": 6,
+        "anyButtons": [
+          "LP",
+          "MP",
+          "HP"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "elena_leopardsnap",
+    "characterId": "elena",
+    "name": "レオパードスナップ",
+    "notation": "6LK",
+    "category": "special",
+    "steps": [
+      {
+        "direction": 6,
+        "anyButtons": [
+          "LK"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "elena_harvestcircle",
+    "characterId": "elena",
+    "name": "ハーベストサークル",
+    "notation": "6MK",
+    "category": "special",
+    "steps": [
+      {
+        "direction": 6,
+        "anyButtons": [
+          "MK"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "elena_malletsmash",
+    "characterId": "elena",
+    "name": "マレットスマッシュ",
+    "notation": "6HK",
+    "category": "special",
+    "steps": [
+      {
+        "direction": 6,
+        "anyButtons": [
+          "HK"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "elena_ringswirl",
+    "characterId": "elena",
+    "name": "リンクスワール",
+    "notation": "6P",
+    "category": "special",
+    "steps": [
+      {
+        "direction": 6,
+        "anyButtons": [
+          "LP",
+          "MP",
+          "HP"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "elena_spinscythe",
+    "characterId": "elena",
+    "name": "スピンサイズ",
+    "notation": "214K",
+    "category": "special",
+    "steps": [
+      {
+        "direction": 2
+      },
+      {
+        "direction": 1,
+        "optional": true
+      },
+      {
+        "direction": 4,
+        "anyButtons": [
+          "LK",
+          "MK",
+          "HK"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "elena_sa1",
+    "characterId": "elena",
+    "name": "SA1 ミーティアボレー",
+    "notation": "236236K",
+    "category": "super",
+    "steps": [
+      {
+        "direction": 2
+      },
+      {
+        "direction": 3,
+        "optional": true
+      },
+      {
+        "direction": 6
+      },
+      {
+        "direction": 2
+      },
+      {
+        "direction": 3,
+        "optional": true
+      },
+      {
+        "direction": 6,
+        "anyButtons": [
+          "LK",
+          "MK",
+          "HK"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "elena_sa2",
+    "characterId": "elena",
+    "name": "SA2 リヴァイブダンス",
+    "notation": "236236P",
+    "category": "super",
+    "steps": [
+      {
+        "direction": 2
+      },
+      {
+        "direction": 3,
+        "optional": true
+      },
+      {
+        "direction": 6
+      },
+      {
+        "direction": 2
+      },
+      {
+        "direction": 3,
+        "optional": true
+      },
+      {
+        "direction": 6,
+        "anyButtons": [
+          "LP",
+          "MP",
+          "HP"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "elena_sa3",
+    "characterId": "elena",
+    "name": "SA3 グラスランドソング",
+    "notation": "214214K",
+    "category": "super",
+    "steps": [
+      {
+        "direction": 2
+      },
+      {
+        "direction": 1,
+        "optional": true
+      },
+      {
+        "direction": 4
+      },
+      {
+        "direction": 2
+      },
+      {
+        "direction": 1,
+        "optional": true
+      },
+      {
+        "direction": 4,
+        "anyButtons": [
+          "LK",
+          "MK",
+          "HK"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "sagat_tigershot",
+    "characterId": "sagat",
+    "name": "タイガーショット",
+    "notation": "236MP/HP",
+    "category": "special",
+    "steps": [
+      {
+        "direction": 2
+      },
+      {
+        "direction": 3,
+        "optional": true
+      },
+      {
+        "direction": 6,
+        "anyButtons": [
+          "MP",
+          "HP"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "sagat_groundtigershot",
+    "characterId": "sagat",
+    "name": "グランドタイガーショット",
+    "notation": "236LP",
+    "category": "special",
+    "steps": [
+      {
+        "direction": 2
+      },
+      {
+        "direction": 3,
+        "optional": true
+      },
+      {
+        "direction": 6,
+        "anyButtons": [
+          "LP"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "sagat_tigeruppercut",
+    "characterId": "sagat",
+    "name": "タイガーアッパーカット",
+    "notation": "623P",
+    "category": "special",
+    "steps": [
+      {
+        "direction": 6
+      },
+      {
+        "direction": 2
+      },
+      {
+        "direction": 3,
+        "anyButtons": [
+          "LP",
+          "MP",
+          "HP"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "sagat_tigerkneecrush",
+    "characterId": "sagat",
+    "name": "タイガーニークラッシュ",
+    "notation": "236K",
+    "category": "special",
+    "steps": [
+      {
+        "direction": 2
+      },
+      {
+        "direction": 3,
+        "optional": true
+      },
+      {
+        "direction": 6,
+        "anyButtons": [
+          "LK",
+          "MK",
+          "HK"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "sagat_tigernexus",
+    "characterId": "sagat",
+    "name": "タイガーネクサス",
+    "notation": "214K",
+    "category": "special",
+    "steps": [
+      {
+        "direction": 2
+      },
+      {
+        "direction": 1,
+        "optional": true
+      },
+      {
+        "direction": 4,
+        "anyButtons": [
+          "LK",
+          "MK",
+          "HK"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "sagat_tigermite",
+    "characterId": "sagat",
+    "name": "タイガーマイト",
+    "notation": "6LK",
+    "category": "special",
+    "steps": [
+      {
+        "direction": 6,
+        "anyButtons": [
+          "LK"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "sagat_tigergreed",
+    "characterId": "sagat",
+    "name": "タイガーグリード",
+    "notation": "6MK",
+    "category": "special",
+    "steps": [
+      {
+        "direction": 6,
+        "anyButtons": [
+          "MK"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "sagat_tigernova",
+    "characterId": "sagat",
+    "name": "タイガーノヴァ",
+    "notation": "6HK",
+    "category": "special",
+    "steps": [
+      {
+        "direction": 6,
+        "anyButtons": [
+          "HK"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "sagat_tigerheavyelbow",
+    "characterId": "sagat",
+    "name": "タイガーヘビーエルボー",
+    "notation": "6MP",
+    "category": "special",
+    "steps": [
+      {
+        "direction": 6,
+        "anyButtons": [
+          "MP"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "sagat_tigermonolith",
+    "characterId": "sagat",
+    "name": "タイガーモノリス",
+    "notation": "4HP",
+    "category": "special",
+    "steps": [
+      {
+        "direction": 4,
+        "anyButtons": [
+          "HP"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "sagat_sa1",
+    "characterId": "sagat",
+    "name": "SA1 タイガーキャノン",
+    "notation": "236236P",
+    "category": "super",
+    "steps": [
+      {
+        "direction": 2
+      },
+      {
+        "direction": 3,
+        "optional": true
+      },
+      {
+        "direction": 6
+      },
+      {
+        "direction": 2
+      },
+      {
+        "direction": 3,
+        "optional": true
+      },
+      {
+        "direction": 6,
+        "anyButtons": [
+          "LP",
+          "MP",
+          "HP"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "sagat_sa2",
+    "characterId": "sagat",
+    "name": "SA2 サベージタイガー",
+    "notation": "214214K",
+    "category": "super",
+    "steps": [
+      {
+        "direction": 2
+      },
+      {
+        "direction": 1,
+        "optional": true
+      },
+      {
+        "direction": 4
+      },
+      {
+        "direction": 2
+      },
+      {
+        "direction": 1,
+        "optional": true
+      },
+      {
+        "direction": 4,
+        "anyButtons": [
+          "LK",
+          "MK",
+          "HK"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "sagat_sa3",
+    "characterId": "sagat",
+    "name": "SA3 タイガーヴァンキッシュ",
+    "notation": "236236K",
+    "category": "super",
+    "steps": [
+      {
+        "direction": 2
+      },
+      {
+        "direction": 3,
+        "optional": true
+      },
+      {
+        "direction": 6
+      },
+      {
+        "direction": 2
+      },
+      {
+        "direction": 3,
+        "optional": true
+      },
+      {
+        "direction": 6,
+        "anyButtons": [
+          "LK",
+          "MK",
+          "HK"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "cviper_thunderslap",
+    "characterId": "cviper",
+    "name": "サンダースラップ",
+    "notation": "214P",
+    "category": "special",
+    "steps": [
+      {
+        "direction": 2
+      },
+      {
+        "direction": 1,
+        "optional": true
+      },
+      {
+        "direction": 4,
+        "anyButtons": [
+          "LP",
+          "MP",
+          "HP"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "cviper_burningkick",
+    "characterId": "cviper",
+    "name": "バーニングキック",
+    "notation": "236K",
+    "category": "special",
+    "steps": [
+      {
+        "direction": 2
+      },
+      {
+        "direction": 3,
+        "optional": true
+      },
+      {
+        "direction": 6,
+        "anyButtons": [
+          "LK",
+          "MK",
+          "HK"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "cviper_seismohammer",
+    "characterId": "cviper",
+    "name": "セイスモハンマー",
+    "notation": "623P",
+    "category": "special",
+    "steps": [
+      {
+        "direction": 6
+      },
+      {
+        "direction": 2
+      },
+      {
+        "direction": 3,
+        "anyButtons": [
+          "LP",
+          "MP",
+          "HP"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "cviper_savingforce",
+    "characterId": "cviper",
+    "name": "セービングフォース",
+    "notation": "214K",
+    "category": "special",
+    "steps": [
+      {
+        "direction": 2
+      },
+      {
+        "direction": 1,
+        "optional": true
+      },
+      {
+        "direction": 4,
+        "anyButtons": [
+          "LK",
+          "MK",
+          "HK"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "cviper_viperelbow",
+    "characterId": "cviper",
+    "name": "ヴァイパーエルボー",
+    "notation": "6MP",
+    "category": "special",
+    "steps": [
+      {
+        "direction": 6,
+        "anyButtons": [
+          "MP"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "cviper_doublekick",
+    "characterId": "cviper",
+    "name": "ダブルキック",
+    "notation": "6HK",
+    "category": "special",
+    "steps": [
+      {
+        "direction": 6,
+        "anyButtons": [
+          "HK"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "cviper_sa1",
+    "characterId": "cviper",
+    "name": "SA1 バウンサーステップ",
+    "notation": "236236K",
+    "category": "super",
+    "steps": [
+      {
+        "direction": 2
+      },
+      {
+        "direction": 3,
+        "optional": true
+      },
+      {
+        "direction": 6
+      },
+      {
+        "direction": 2
+      },
+      {
+        "direction": 3,
+        "optional": true
+      },
+      {
+        "direction": 6,
+        "anyButtons": [
+          "LK",
+          "MK",
+          "HK"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "cviper_sa2",
+    "characterId": "cviper",
+    "name": "SA2 ミッションオーバー",
+    "notation": "214214P",
+    "category": "super",
+    "steps": [
+      {
+        "direction": 2
+      },
+      {
+        "direction": 1,
+        "optional": true
+      },
+      {
+        "direction": 4
+      },
+      {
+        "direction": 2
+      },
+      {
+        "direction": 1,
+        "optional": true
+      },
+      {
+        "direction": 4,
+        "anyButtons": [
+          "LP",
+          "MP",
+          "HP"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "cviper_sa3",
+    "characterId": "cviper",
+    "name": "SA3 アンラックリジェクター",
+    "notation": "214214K",
+    "category": "super",
+    "steps": [
+      {
+        "direction": 2
+      },
+      {
+        "direction": 1,
+        "optional": true
+      },
+      {
+        "direction": 4
+      },
+      {
+        "direction": 2
+      },
+      {
+        "direction": 1,
+        "optional": true
+      },
+      {
+        "direction": 4,
+        "anyButtons": [
+          "LK",
+          "MK",
+          "HK"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "alex_flashaxe",
+    "characterId": "alex",
+    "name": "フラッシュアックス",
+    "notation": "236LP/MP",
+    "category": "special",
+    "steps": [
+      {
+        "direction": 2
+      },
+      {
+        "direction": 3,
+        "optional": true
+      },
+      {
+        "direction": 6,
+        "anyButtons": [
+          "LP",
+          "MP"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "alex_flashchop",
+    "characterId": "alex",
+    "name": "フラッシュチョップ",
+    "notation": "236HP",
+    "category": "special",
+    "steps": [
+      {
+        "direction": 2
+      },
+      {
+        "direction": 3,
+        "optional": true
+      },
+      {
+        "direction": 6,
+        "anyButtons": [
+          "HP"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "alex_airkneesmash",
+    "characterId": "alex",
+    "name": "エアニースマッシュ",
+    "notation": "623K",
+    "category": "special",
+    "steps": [
+      {
+        "direction": 6
+      },
+      {
+        "direction": 2
+      },
+      {
+        "direction": 3,
+        "anyButtons": [
+          "LK",
+          "MK",
+          "HK"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "alex_powerbomb",
+    "characterId": "alex",
+    "name": "パワーボム",
+    "notation": "63214P",
+    "category": "special",
+    "steps": [
+      {
+        "direction": 6
+      },
+      {
+        "direction": 3,
+        "optional": true
+      },
+      {
+        "direction": 2
+      },
+      {
+        "direction": 1,
+        "optional": true
+      },
+      {
+        "direction": 4,
+        "anyButtons": [
+          "LP",
+          "MP",
+          "HP"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "alex_slashelbow",
+    "characterId": "alex",
+    "name": "スラッシュエルボー",
+    "notation": "6P",
+    "category": "special",
+    "steps": [
+      {
+        "direction": 6,
+        "anyButtons": [
+          "LP",
+          "MP",
+          "HP"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "alex_sa1",
+    "characterId": "alex",
+    "name": "SA1 レイジングスピアー",
+    "notation": "236236K",
+    "category": "super",
+    "steps": [
+      {
+        "direction": 2
+      },
+      {
+        "direction": 3,
+        "optional": true
+      },
+      {
+        "direction": 6
+      },
+      {
+        "direction": 2
+      },
+      {
+        "direction": 3,
+        "optional": true
+      },
+      {
+        "direction": 6,
+        "anyButtons": [
+          "LK",
+          "MK",
+          "HK"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "alex_sa2",
+    "characterId": "alex",
+    "name": "SA2 スレッジクロスハンマー",
+    "notation": "214214P",
+    "category": "super",
+    "steps": [
+      {
+        "direction": 2
+      },
+      {
+        "direction": 1,
+        "optional": true
+      },
+      {
+        "direction": 4
+      },
+      {
+        "direction": 2
+      },
+      {
+        "direction": 1,
+        "optional": true
+      },
+      {
+        "direction": 4,
+        "anyButtons": [
+          "LP",
+          "MP",
+          "HP"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "alex_sa3",
+    "characterId": "alex",
+    "name": "SA3 ファイナルキャプチュード",
+    "notation": "236236P",
+    "category": "super",
+    "steps": [
+      {
+        "direction": 2
+      },
+      {
+        "direction": 3,
+        "optional": true
+      },
+      {
+        "direction": 6
+      },
+      {
+        "direction": 2
+      },
+      {
+        "direction": 3,
+        "optional": true
+      },
+      {
+        "direction": 6,
+        "anyButtons": [
+          "LP",
+          "MP",
+          "HP"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "ingrid_sunshoot",
+    "characterId": "ingrid",
+    "name": "サンシュート",
+    "notation": "236P",
+    "category": "special",
+    "steps": [
+      {
+        "direction": 2
+      },
+      {
+        "direction": 3,
+        "optional": true
+      },
+      {
+        "direction": 6,
+        "anyButtons": [
+          "LP",
+          "MP",
+          "HP"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "ingrid_sunflare",
+    "characterId": "ingrid",
+    "name": "サンフレア",
+    "notation": "214P",
+    "category": "special",
+    "steps": [
+      {
+        "direction": 2
+      },
+      {
+        "direction": 1,
+        "optional": true
+      },
+      {
+        "direction": 4,
+        "anyButtons": [
+          "LP",
+          "MP",
+          "HP"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "ingrid_solarflare",
+    "characterId": "ingrid",
+    "name": "ソーラーフレア",
+    "notation": "214P",
+    "category": "special",
+    "steps": [
+      {
+        "direction": 2
+      },
+      {
+        "direction": 1,
+        "optional": true
+      },
+      {
+        "direction": 4,
+        "anyButtons": [
+          "LP",
+          "MP",
+          "HP"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "ingrid_sunrise",
+    "characterId": "ingrid",
+    "name": "サンライズ",
+    "notation": "236K",
+    "category": "special",
+    "steps": [
+      {
+        "direction": 2
+      },
+      {
+        "direction": 3,
+        "optional": true
+      },
+      {
+        "direction": 6,
+        "anyButtons": [
+          "LK",
+          "MK",
+          "HK"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "ingrid_sunveil",
+    "characterId": "ingrid",
+    "name": "サンヴェール",
+    "notation": "22K",
+    "category": "special",
+    "steps": [
+      {
+        "direction": 2
+      },
+      {
+        "direction": 2,
+        "anyButtons": [
+          "LK",
+          "MK",
+          "HK"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "ingrid_sunblight",
+    "characterId": "ingrid",
+    "name": "サンブライト",
+    "notation": "6MP",
+    "category": "special",
+    "steps": [
+      {
+        "direction": 6,
+        "anyButtons": [
+          "MP"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "ingrid_halostep",
+    "characterId": "ingrid",
+    "name": "ヘイローステップ",
+    "notation": "6HP",
+    "category": "special",
+    "steps": [
+      {
+        "direction": 6,
+        "anyButtons": [
+          "HP"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "ingrid_sa1",
+    "characterId": "ingrid",
+    "name": "SA1 サンシャイン",
+    "notation": "236236K",
+    "category": "super",
+    "steps": [
+      {
+        "direction": 2
+      },
+      {
+        "direction": 3,
+        "optional": true
+      },
+      {
+        "direction": 6
+      },
+      {
+        "direction": 2
+      },
+      {
+        "direction": 3,
+        "optional": true
+      },
+      {
+        "direction": 6,
+        "anyButtons": [
+          "LK",
+          "MK",
+          "HK"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "ingrid_sa2",
+    "characterId": "ingrid",
+    "name": "SA2 サンオーダー",
+    "notation": "214214P",
+    "category": "super",
+    "steps": [
+      {
+        "direction": 2
+      },
+      {
+        "direction": 1,
+        "optional": true
+      },
+      {
+        "direction": 4
+      },
+      {
+        "direction": 2
+      },
+      {
+        "direction": 1,
+        "optional": true
+      },
+      {
+        "direction": 4,
+        "anyButtons": [
+          "LP",
+          "MP",
+          "HP"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "ingrid_sa3",
+    "characterId": "ingrid",
+    "name": "SA3 コズミックレイ",
+    "notation": "236236P",
+    "category": "super",
+    "steps": [
+      {
+        "direction": 2
+      },
+      {
+        "direction": 3,
+        "optional": true
+      },
+      {
+        "direction": 6
+      },
+      {
+        "direction": 2
+      },
+      {
+        "direction": 3,
+        "optional": true
+      },
+      {
+        "direction": 6,
+        "anyButtons": [
+          "LP",
+          "MP",
+          "HP"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "yasmine_daloyntubig",
+    "characterId": "yasmine",
+    "name": "ダロイ・ン・トゥビグ",
+    "notation": "236P",
+    "category": "special",
+    "steps": [
+      {
+        "direction": 2
+      },
+      {
+        "direction": 3,
+        "optional": true
+      },
+      {
+        "direction": 6,
+        "anyButtons": [
+          "LP",
+          "MP",
+          "HP"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "yasmine_aron",
+    "characterId": "yasmine",
+    "name": "アロン",
+    "notation": "6P",
+    "category": "special",
+    "steps": [
+      {
+        "direction": 6,
+        "anyButtons": [
+          "LP",
+          "MP",
+          "HP"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "yasmine_talimnhangin",
+    "characterId": "yasmine",
+    "name": "タリム・ン・ハンギン",
+    "notation": "214P",
+    "category": "special",
+    "steps": [
+      {
+        "direction": 2
+      },
+      {
+        "direction": 1,
+        "optional": true
+      },
+      {
+        "direction": 4,
+        "anyButtons": [
+          "LP",
+          "MP",
+          "HP"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "yasmine_mukanlangit",
+    "characterId": "yasmine",
+    "name": "ムカ・ン・ランギット",
+    "notation": "236K",
+    "category": "special",
+    "steps": [
+      {
+        "direction": 2
+      },
+      {
+        "direction": 3,
+        "optional": true
+      },
+      {
+        "direction": 6,
+        "anyButtons": [
+          "LK",
+          "MK",
+          "HK"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "yasmine_ripanagila",
+    "characterId": "yasmine",
+    "name": "リパ・ン・アギラ",
+    "notation": "623K",
+    "category": "special",
+    "steps": [
+      {
+        "direction": 6
+      },
+      {
+        "direction": 2
+      },
+      {
+        "direction": 3,
+        "anyButtons": [
+          "LK",
+          "MK",
+          "HK"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "yasmine_pangilsalikuran",
+    "characterId": "yasmine",
+    "name": "パンギル・サ・リクラン",
+    "notation": "22P",
+    "category": "special",
+    "steps": [
+      {
+        "direction": 2
+      },
+      {
+        "direction": 2,
+        "anyButtons": [
+          "LP",
+          "MP",
+          "HP"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "yasmine_hiwanpababa",
+    "characterId": "yasmine",
+    "name": "ヒワン・パババ",
+    "notation": "6MP",
+    "category": "special",
+    "steps": [
+      {
+        "direction": 6,
+        "anyButtons": [
+          "MP"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "yasmine_warisnapabagsa",
+    "characterId": "yasmine",
+    "name": "ワリス・ナ・パバグサ",
+    "notation": "4HK",
+    "category": "special",
+    "steps": [
+      {
+        "direction": 4,
+        "anyButtons": [
+          "HK"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "yasmine_sa1",
+    "characterId": "yasmine",
+    "name": "SA1 ヒワン・ン・カラヒタン",
+    "notation": "236236K",
+    "category": "super",
+    "steps": [
+      {
+        "direction": 2
+      },
+      {
+        "direction": 3,
+        "optional": true
+      },
+      {
+        "direction": 6
+      },
+      {
+        "direction": 2
+      },
+      {
+        "direction": 3,
+        "optional": true
+      },
+      {
+        "direction": 6,
+        "anyButtons": [
+          "LK",
+          "MK",
+          "HK"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "yasmine_sa2",
+    "characterId": "yasmine",
+    "name": "SA2 ナカタゴン・ラカス",
+    "notation": "214214P",
+    "category": "super",
+    "steps": [
+      {
+        "direction": 2
+      },
+      {
+        "direction": 1,
+        "optional": true
+      },
+      {
+        "direction": 4
+      },
+      {
+        "direction": 2
+      },
+      {
+        "direction": 1,
+        "optional": true
+      },
+      {
+        "direction": 4,
+        "anyButtons": [
+          "LP",
+          "MP",
+          "HP"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "yasmine_sa3",
+    "characterId": "yasmine",
+    "name": "SA3 パムムカドカッド・ン・サンパギータ",
+    "notation": "236236P",
+    "category": "super",
+    "steps": [
+      {
+        "direction": 2
+      },
+      {
+        "direction": 3,
+        "optional": true
+      },
+      {
+        "direction": 6
+      },
+      {
+        "direction": 2
+      },
+      {
+        "direction": 3,
+        "optional": true
+      },
+      {
+        "direction": 6,
+        "anyButtons": [
+          "LP",
+          "MP",
+          "HP"
+        ]
+      }
+    ]
+  }
+]

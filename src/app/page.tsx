@@ -1,68 +1,106 @@
-import Image from "next/image";
+/**
+ * メインダッシュボード / 練習画面
+ *
+ * 依存関係:
+ * - src/store/useInputStore.ts の useInputWatcher() をここで1回だけマウントし、
+ *   キーボード/ゲームパッドの監視を開始する（KeyDisplay・InputPanel・PracticeMode全てがこの入力ログを使う）
+ * - src/components/KeyDisplay.tsx（入力履歴の横スクロール表示）
+ * - src/components/InputPanel.tsx（現在の方向・ボタン状態のコントローラー風表示）
+ * - src/components/PracticeMode.tsx（キャラ別技選択・判定）
+ * - src/components/CommandAnalyzer.tsx（エラー分析ダッシュボード）
+ * - src/components/DeviceSelector.tsx（入力機器切替・ボタンマッピング設定）
+ * - src/components/SoundControls.tsx（入力音・判定音・メトロノーム設定）
+ * - src/components/GamepadTester.tsx（ゲームパッドの生入力を可視化する診断パネル）
+ */
+"use client";
+
+import { useEffect, useState } from "react";
+import { RotateCcw } from "lucide-react";
+import { CommandAnalyzer } from "@/components/CommandAnalyzer";
+import { ButtonMappingEditor, DeviceSelector } from "@/components/DeviceSelector";
+import { GamepadTester } from "@/components/GamepadTester";
+import { InputPanel } from "@/components/InputPanel";
+import { KeyDisplay } from "@/components/KeyDisplay";
+import { PracticeMode } from "@/components/PracticeMode";
+import { SoundControls } from "@/components/SoundControls";
+import { ThemeToggle } from "@/components/ThemeToggle";
+import { useInputStore, useInputWatcher } from "@/store/useInputStore";
+
+/** ネイティブのwindow.confirm()はページ全体をブロックしてしまう（自動化操作も固まる）ため使わず、
+ * 「もう一度押すと確定」の2段階クリックで誤操作を防ぐ */
+function ResetButton() {
+  const resetAll = useInputStore((state) => state.resetAll);
+  const [armed, setArmed] = useState(false);
+
+  useEffect(() => {
+    if (!armed) return;
+    const timer = setTimeout(() => setArmed(false), 3000);
+    return () => clearTimeout(timer);
+  }, [armed]);
+
+  return (
+    <button
+      type="button"
+      onClick={() => {
+        if (armed) {
+          resetAll();
+          setArmed(false);
+        } else {
+          setArmed(true);
+        }
+      }}
+      className={`flex items-center gap-1 rounded border px-2 py-1 text-sm ${
+        armed
+          ? "border-red-700 bg-red-100 text-red-700 dark:bg-red-950 dark:text-red-300"
+          : "border-neutral-300 bg-white text-neutral-700 hover:bg-neutral-100 dark:border-neutral-700 dark:bg-neutral-900 dark:text-neutral-300 dark:hover:bg-neutral-800"
+      }`}
+      title="入力履歴・試行結果をリセット"
+    >
+      <RotateCcw className="h-3.5 w-3.5" />
+      {armed ? "もう一度押すと確定" : "リセット"}
+    </button>
+  );
+}
 
 export default function Home() {
+  useInputWatcher();
+  const device = useInputStore((state) => state.device);
+  const setDevice = useInputStore((state) => state.setDevice);
+
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert h-5 w-[100px]"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the{" "}
-            <code className="rounded bg-black/[.06] px-1.5 py-0.5 font-mono text-[0.9em] dark:bg-white/[.08]">
-              page.tsx
-            </code>{" "}
-            file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
+    <div className="flex min-h-screen flex-col items-center bg-neutral-50 px-4 py-10 dark:bg-neutral-950">
+      <main className="flex w-full max-w-3xl flex-col gap-6">
+        <div className="flex flex-wrap items-center justify-between gap-2">
+          <h1 className="text-xl font-bold text-neutral-900 dark:text-neutral-100">スト6コマンド練習ラボ</h1>
+          <div className="flex items-center gap-2">
+            <ResetButton />
+            <ThemeToggle />
+            <DeviceSelector value={device} onChange={setDevice} />
+          </div>
+        </div>
+
+        <SoundControls />
+
+        <div className="flex flex-wrap gap-2">
+          <div className="min-w-0 flex-1">
+            <KeyDisplay />
+          </div>
+          <InputPanel />
+        </div>
+
+        <PracticeMode />
+        <CommandAnalyzer />
+        <GamepadTester />
+
+        <section className="rounded-lg border border-neutral-300 p-4 dark:border-neutral-700">
+          <h2 className="text-sm font-semibold text-neutral-800 dark:text-neutral-200">ボタン設定</h2>
+          <p className="mt-1 text-xs text-neutral-500">
+            キーボードのキー（KeyCode）とゲームパッドのボタン番号を割り当て直せます。設定は端末のLocalStorageに保存されます。
           </p>
-        </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert h-[14px] w-4"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={14}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
-        </div>
+          <div className="mt-3">
+            <ButtonMappingEditor />
+          </div>
+        </section>
       </main>
     </div>
   );
