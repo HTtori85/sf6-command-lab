@@ -179,6 +179,20 @@ export function useInputWatcher() {
 
   useEffect(() => useInputStore.subscribe((state) => { deviceRef.current = state.device; }), []);
 
+  // <select>要素はクリックで選んだ後もキーボードフォーカスを保持し続ける。ブラウザ標準の
+  // 「文字キーを押すと先頭がその文字の選択肢へジャンプする」機能（タイプアヘッド）のせいで、
+  // 例えば技選択のプルダウンをクリックした直後に下方向キー（デフォルトS）を押すと、
+  // "SA1"のようなSで始まる選択肢へ勝手に切り替わってしまう不具合があった
+  // （技選択でSA1に化けるという報告の原因）。change発火直後にblurすることで、
+  // 以後のWASD+UIOJKL入力をselectに横取りされないようにする。
+  useEffect(() => {
+    const handleChange = (e: Event) => {
+      if (e.target instanceof HTMLSelectElement) e.target.blur();
+    };
+    document.addEventListener("change", handleChange);
+    return () => document.removeEventListener("change", handleChange);
+  }, []);
+
   useEffect(() => {
     const stopKeyboard = startKeyboardWatch(
       (snapshot) => pushFrame(snapshot.direction, snapshot.buttons, "keyboard"),
