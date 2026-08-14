@@ -34,7 +34,7 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
-const SITE_URL = "https://sf6-command-lab-xwh5-ctcb2cjxo-httori85s-projects.vercel.app";
+const SITE_URL = "https://sf6-command-lab.vercel.app";
 const SITE_TITLE = "スト6コマンド練習ラボ";
 const SITE_DESCRIPTION =
   "ストリートファイター6のコマンド入力を無料で練習できるツール。実機準拠のフレーム判定、全29キャラの必殺技・SA対応、キーボード/ゲームパッド対応。";
@@ -70,12 +70,16 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
           {THEME_INIT_SCRIPT}
         </Script>
         {/* AdSenseの自動広告用スクリプト。全ページのheadに設置することで、Googleが最適な位置に
-            自動で広告を配置する（個別の広告ユニット作成は不要） */}
-        <Script
+            自動で広告を配置する（個別の広告ユニット作成は不要）。
+            next/scriptのafterInteractive戦略だと、生のHTMLにはlink rel="preload"としてしか
+            出力されず、実際の<script>タグはハイドレーション後にReactが生成する（RSCのペイロード内に
+            シリアライズされているだけ）。AdSenseのサイト所有権確認クローラーはJSを実行せず生HTMLの
+            <script src>タグを探すため、これでは「サイトを確認できません」になってしまっていた。
+            素のscriptタグとして書けば、React 19の仕組みでビルド時にそのままheadへ出力される。 */}
+        <script
           async
           src={`https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${ADSENSE_CLIENT_ID}`}
           crossOrigin="anonymous"
-          strategy="afterInteractive"
         />
         {children}
       </body>
