@@ -1,36 +1,57 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# スト6コマンド練習ラボ
 
-## Getting Started
+ストリートファイター6のコマンド入力を練習するための、キーボード/ゲームパッド対応の練習ツールです。
+公開URL: https://sf6-command-lab-xwh5-ctcb2cjxo-httori85s-projects.vercel.app
 
-First, run the development server:
+## 主な機能
+
+- **実機準拠のコマンド判定**：60fps固定でサンプリングし、実際のスト6と同じ精度で判定（モニターのリフレッシュレートに依存しない）
+- **全29キャラクター**対応（必殺技・SA1〜3）
+- **簡易入力（省略入力）**：実機同様、236236などの斜めを1回省略しても成立するモード（ON/OFF切替可）
+- 弱中強どのボタンでも必殺技が成立（`anyButtons`による判定）
+- キーボード / ゲームパッド（パッド・アケコン・レバーレス）対応、ボタンは「押して設定」で割り当て可能
+- ゲームパッドテスター（コントローラーの生入力を可視化する診断パネル）
+- エラー分析ダッシュボード（余剰入力・要素抜けの傾向を技ごと/全体で分析）
+- ライト/ダークテーマ、入力音・判定音・メトロノーム
+
+## 技術スタック
+
+- [Next.js](https://nextjs.org)（App Router）/ TypeScript
+- [Tailwind CSS](https://tailwindcss.com) v4
+- [Zustand](https://zustand-demo.pmnd.rs/)（状態管理・LocalStorage永続化）
+- [lucide-react](https://lucide.dev)（アイコン）
+
+サーバー・DBは使用していません（すべてクライアントサイドで完結、設定はLocalStorageに保存）。
+
+## 開発
 
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+[http://localhost:3000](http://localhost:3000) で確認できます。
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```bash
+npm run lint        # ESLint
+npx tsc --noEmit     # 型チェック
+npm run build        # 本番ビルド
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## デプロイ
 
-## Learn More
+`master` ブランチへのpushでVercelに自動デプロイされます。
 
-To learn more about Next.js, take a look at the following resources:
+## ディレクトリ構成
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+```
+src/
+  app/          # Next.js App Router（ページ本体）
+  components/   # UIコンポーネント
+  lib/          # 入力検知・判定エンジン・各種ユーティリティ
+  store/        # Zustandストア（入力ログ・設定）
+  types/        # 共通型定義
+  data/         # コマンドマスターデータ（commands.json）
+docs/           # 参考資料
+REQUIREMENTS.md # 要件定義
+```

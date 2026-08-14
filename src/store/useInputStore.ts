@@ -21,12 +21,7 @@
 import { useEffect, useRef } from "react";
 import { create } from "zustand";
 import { createJSONStorage, persist } from "zustand/middleware";
-import {
-  DEFAULT_GAMEPAD_BUTTON_MAP,
-  DEFAULT_GAMEPAD_DIRECTION_MAP,
-  startGamepadPolling,
-  type GamepadDirectionKey,
-} from "@/lib/gamepad";
+import { DEFAULT_GAMEPAD_BUTTON_MAP, startGamepadPolling } from "@/lib/gamepad";
 import { DEFAULT_KEYBOARD_BUTTON_MAP, DEFAULT_KEYBOARD_DIRECTION_MAP, startKeyboardWatch } from "@/lib/keyboard";
 import { playInputTick } from "@/lib/sound";
 import type {
@@ -58,8 +53,6 @@ interface InputState {
   attempts: CommandAttemptResult[];
   keyboardButtonMap: Record<string, ButtonName>;
   gamepadButtonMap: Record<number, ButtonName>;
-  /** ゲームパッドの十字キー（方向）のボタン番号マップ。標準マッピング外のアケコン/レバーレス対策で設定可能にしてある */
-  gamepadDirectionMap: Record<number, GamepadDirectionKey>;
   /** ゲームパッドのボタン番号をPS5/Xbox/Switchどの表記でラベル表示するか */
   gamepadLabelScheme: GamepadLabelScheme;
   /** 入力のたびに操作音を鳴らすか */
@@ -82,7 +75,6 @@ interface InputState {
   resetAll: () => void;
   setKeyboardKeyForButton: (button: ButtonName, code: string) => void;
   setGamepadIndexForButton: (button: ButtonName, index: number) => void;
-  setGamepadIndexForDirection: (direction: GamepadDirectionKey, index: number) => void;
   setGamepadLabelScheme: (scheme: GamepadLabelScheme) => void;
   setInputSoundEnabled: (enabled: boolean) => void;
   setResultSoundEnabled: (enabled: boolean) => void;
@@ -100,10 +92,9 @@ export const useInputStore = create<InputState>()(
       attempts: [],
       keyboardButtonMap: DEFAULT_KEYBOARD_BUTTON_MAP,
       gamepadButtonMap: DEFAULT_GAMEPAD_BUTTON_MAP,
-      gamepadDirectionMap: DEFAULT_GAMEPAD_DIRECTION_MAP,
       gamepadLabelScheme: "ps5",
-      inputSoundEnabled: false,
-      resultSoundEnabled: false,
+      inputSoundEnabled: true,
+      resultSoundEnabled: true,
       metronomeBpm: 120,
       metronomeOn: false,
       theme: "system",
@@ -144,15 +135,6 @@ export const useInputStore = create<InputState>()(
           next[index] = button;
           return { gamepadButtonMap: next };
         }),
-      setGamepadIndexForDirection: (direction, index) =>
-        set((state) => {
-          const next: Record<number, GamepadDirectionKey> = {};
-          for (const [i, d] of Object.entries(state.gamepadDirectionMap)) {
-            if (d !== direction) next[Number(i)] = d;
-          }
-          next[index] = direction;
-          return { gamepadDirectionMap: next };
-        }),
       setGamepadLabelScheme: (scheme) => set({ gamepadLabelScheme: scheme }),
       setInputSoundEnabled: (enabled) => set({ inputSoundEnabled: enabled }),
       setResultSoundEnabled: (enabled) => set({ resultSoundEnabled: enabled }),
@@ -169,7 +151,6 @@ export const useInputStore = create<InputState>()(
         device: state.device,
         keyboardButtonMap: state.keyboardButtonMap,
         gamepadButtonMap: state.gamepadButtonMap,
-        gamepadDirectionMap: state.gamepadDirectionMap,
         gamepadLabelScheme: state.gamepadLabelScheme,
         inputSoundEnabled: state.inputSoundEnabled,
         resultSoundEnabled: state.resultSoundEnabled,
@@ -190,7 +171,6 @@ export function useInputWatcher() {
   const pushFrame = useInputStore((state) => state.pushFrame);
   const keyboardButtonMap = useInputStore((state) => state.keyboardButtonMap);
   const gamepadButtonMap = useInputStore((state) => state.gamepadButtonMap);
-  const gamepadDirectionMap = useInputStore((state) => state.gamepadDirectionMap);
   const deviceRef = useRef(useInputStore.getState().device);
 
   useEffect(() => {
@@ -213,11 +193,10 @@ export function useInputWatcher() {
         pushFrame(snapshot.direction, snapshot.buttons, gamepadDevice);
       },
       gamepadButtonMap,
-      gamepadDirectionMap,
     );
     return () => {
       stopKeyboard();
       stopGamepad();
     };
-  }, [pushFrame, keyboardButtonMap, gamepadButtonMap, gamepadDirectionMap]);
+  }, [pushFrame, keyboardButtonMap, gamepadButtonMap]);
 }

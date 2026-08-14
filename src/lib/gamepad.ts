@@ -2,11 +2,21 @@
  * Gamepad API 監視・マッピング処理
  *
  * 依存関係:
- * - src/types/index.ts の DirectionValue / ButtonName / DeviceType を使用する
+ * - src/types/index.ts の ButtonName / DeviceType / DirectionValue を使用する
  * - src/components/KeyDisplay.tsx から呼び出される
  *
  * ブラウザはボタン押下の変化をイベントで通知しないため（Gamepad APIの仕様）、
- * requestAnimationFrameで毎フレームポーリングするのが標準的な検知方法。
+ * requestAnimationFrameで毎フレームポーリングするのが標準的な検知方法。ただし実際に
+ * 状態を読み取り・通知するのはFRAME_INTERVAL_MS（60fps固定）ごとに間引いている。
+ * rAFのコールバック頻度はモニターのリフレッシュレートに同期するため、144Hz/240Hzの
+ * ような高リフレッシュ環境ではコールバックが60fps相当より高頻度で発火し、実フレーム換算で
+ * 1F未満の間隔で状態が変化したように見えてしまう（コントローラーで高速入力すると0Fが
+ * 出るという報告の原因）。実機のスト6は入力を60fps固定で処理するため、モニターのHzに
+ * 関わらずサンプリング頻度を常に60fps相当に揃える必要がある。
+ *
+ * 十字キー（方向）は index 12〜15（Standard Gamepad Mappingの一般的な配置）固定。
+ * 十字キーの割り当て変更UIは複雑さの割に需要が薄いとの判断で見送り、6ボタン側の
+ * 「押して設定」とゲームパッドテスターだけでコントローラーの疎通確認ができるようにしている。
  */
 import type { ButtonName, DeviceType, DirectionValue } from "@/types";
 
@@ -23,24 +33,13 @@ export const DEFAULT_GAMEPAD_BUTTON_MAP: Record<number, ButtonName> = {
   5: "HK",
 };
 
-export type GamepadDirectionKey = "up" | "down" | "left" | "right";
-
-/**
- * Standard Gamepad Mapping における十字キーのボタンインデックス初期値（12〜15）。
- * アケコン/レバーレスの中には標準マッピングとして認識されない機種もあり、その場合はこの番号が
- * 実際の十字キーと一致しない（「コントローラーが反応しない」の主な原因）。DeviceSelectorの
- * 「押して設定」でユーザーが実際の入力から上書きできるようにするため、キーボードのボタン設定と
- * 同様にマップとして持たせている。
- */
-export const DEFAULT_GAMEPAD_DIRECTION_MAP: Record<number, GamepadDirectionKey> = {
-  12: "up",
-  13: "down",
-  14: "left",
-  15: "right",
-};
+const DPAD_BUTTON_INDEX = { up: 12, down: 13, left: 14, right: 15 } as const;
 
 /** アナログスティックのデッドゾーン（この値未満の傾きは入力なしとみなす） */
 const STICK_DEADZONE = 0.5;
+
+/** 実機準拠の60fps固定間隔（ミリ秒）。モニターのリフレッシュレートに関わらずこの間隔でのみサンプリングする */
+const FRAME_INTERVAL_MS = 1000 / 60;
 
 /** 上下左右のON/OFFからテンキー表記（1〜9）の方向値を算出する */
 function dpadToDirection(up: boolean, down: boolean, left: boolean, right: boolean): DirectionValue {
@@ -63,14 +62,11 @@ export interface GamepadFrameSnapshot {
 export function readGamepadSnapshot(
   gamepad: Gamepad,
   buttonMap: Record<number, ButtonName> = DEFAULT_GAMEPAD_BUTTON_MAP,
-  directionMap: Record<number, GamepadDirectionKey> = DEFAULT_GAMEPAD_DIRECTION_MAP,
 ): GamepadFrameSnapshot {
-  const isPressed = (index: number) => gamepad.buttons[index]?.pressed ?? false;
-  const dirEntries = Object.entries(directionMap);
-  const dpadUp = dirEntries.some(([index, dir]) => dir === "up" && isPressed(Number(index)));
-  const dpadDown = dirEntries.some(([index, dir]) => dir === "down" && isPressed(Number(index)));
-  const dpadLeft = dirEntries.some(([index, dir]) => dir === "left" && isPressed(Number(index)));
-  const dpadRight = dirEntries.some(([index, dir]) => dir === "right" && isPressed(Number(index)));
+  const dpadUp = gamepad.buttons[DPAD_BUTTON_INDEX.up]?.pressed ?? false;
+  const dpadDown = gamepad.buttons[DPAD_BUTTON_INDEX.down]?.pressed ?? false;
+  const dpadLeft = gamepad.buttons[DPAD_BUTTON_INDEX.left]?.pressed ?? false;
+  const dpadRight = gamepad.buttons[DPAD_BUTTON_INDEX.right]?.pressed ?? false;
 
   const [stickX, stickY] = gamepad.axes;
   const stickUp = stickY !== undefined && stickY < -STICK_DEADZONE;
@@ -87,7 +83,7 @@ export function readGamepadSnapshot(
 
   const buttons: ButtonName[] = [];
   for (const [indexStr, name] of Object.entries(buttonMap)) {
-    if (isPressed(Number(indexStr))) buttons.push(name);
+    if (gamepad.buttons[Number(indexStr)]?.pressed) buttons.push(name);
   }
 
   return { direction, buttons };
@@ -115,21 +111,24 @@ export function startGamepadPolling(
   device: DeviceType,
   onFrame: GamepadPollCallback,
   buttonMap: Record<number, ButtonName> = DEFAULT_GAMEPAD_BUTTON_MAP,
-  directionMap: Record<number, GamepadDirectionKey> = DEFAULT_GAMEPAD_DIRECTION_MAP,
 ): () => void {
   let rafId: number;
   let stopped = false;
   let lastEmitted: GamepadFrameSnapshot | null = null;
+  let lastSampleTime = 0;
 
-  const tick = () => {
+  const tick = (now: number) => {
     if (stopped) return;
-    const pads = navigator.getGamepads();
-    const gamepad = pads.find((p) => p !== null);
-    if (gamepad) {
-      const snapshot = readGamepadSnapshot(gamepad, buttonMap, directionMap);
-      if (!lastEmitted || !snapshotsEqual(lastEmitted, snapshot)) {
-        lastEmitted = snapshot;
-        onFrame(snapshot, device);
+    if (now - lastSampleTime >= FRAME_INTERVAL_MS) {
+      lastSampleTime = now;
+      const pads = navigator.getGamepads();
+      const gamepad = pads.find((p) => p !== null);
+      if (gamepad) {
+        const snapshot = readGamepadSnapshot(gamepad, buttonMap);
+        if (!lastEmitted || !snapshotsEqual(lastEmitted, snapshot)) {
+          lastEmitted = snapshot;
+          onFrame(snapshot, device);
+        }
       }
     }
     rafId = requestAnimationFrame(tick);

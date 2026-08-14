@@ -11,6 +11,7 @@
  * - src/components/DeviceSelector.tsx（入力機器切替・ボタンマッピング設定）
  * - src/components/SoundControls.tsx（入力音・判定音・メトロノーム設定）
  * - src/components/GamepadTester.tsx（ゲームパッドの生入力を可視化する診断パネル）
+ * - src/components/SimplifiedInputGuide.tsx（省略入力＝簡易入力のコツ一覧）
  */
 "use client";
 
@@ -22,6 +23,7 @@ import { GamepadTester } from "@/components/GamepadTester";
 import { InputPanel } from "@/components/InputPanel";
 import { KeyDisplay } from "@/components/KeyDisplay";
 import { PracticeMode } from "@/components/PracticeMode";
+import { SimplifiedInputGuide } from "@/components/SimplifiedInputGuide";
 import { SoundControls } from "@/components/SoundControls";
 import { ThemeToggle } from "@/components/ThemeToggle";
 import { useInputStore, useInputWatcher } from "@/store/useInputStore";
@@ -89,6 +91,7 @@ export default function Home() {
         </div>
 
         <PracticeMode />
+        <SimplifiedInputGuide />
         <CommandAnalyzer />
         <GamepadTester />
 

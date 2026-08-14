@@ -3,22 +3,22 @@
  *
  * 依存関係:
  * - src/types/index.ts の DeviceType / ButtonName を使用する
- * - src/store/useInputStore.ts の keyboardButtonMap / gamepadButtonMap / gamepadDirectionMap を読み書きする
+ * - src/store/useInputStore.ts の keyboardButtonMap / gamepadButtonMap を読み書きする
  *   （useInputWatcher()がこのマップを使って実際の入力検知に反映する）
  *
  * ボタン割り当ては「番号やKeyCodeを手入力する」のが分かりにくい・面倒という声を受け、
  * 「押して設定」ボタンで実際にキー/コントローラーのボタンを押すだけで割り当てられる
  * キャプチャ方式にした（手入力欄は廃止）。
  *
- * ゲームパッドの十字キー（方向）は従来 index 12〜15 固定だったが、標準マッピングとして
- * 認識されないアケコン/レバーレスでは番号が一致せず「反応しない」原因になっていたため、
- * 6ボタンと同じキャプチャ方式で方向も割り当て直せるようにしてある。
+ * ゲームパッドの番号はPS5/Xbox/Switchの実ボタン表記のみを見せ、生の数字（#0等）は
+ * あえて表示しない（数字表記が分かりにくいという声への対応）。十字キーの番号設定UIは
+ * 複雑さの割に需要が薄いため見送り、ゲームパッドテスターで疎通確認する方針にしている。
  */
 "use client";
 
 import { Fragment, useEffect, useState } from "react";
 import { Crosshair } from "lucide-react";
-import type { GamepadDirectionKey } from "@/lib/gamepad";
+import { ButtonIcon } from "@/components/icons";
 import { GAMEPAD_LABEL_SCHEME_NAMES, gamepadButtonLabel } from "@/lib/gamepadLabels";
 import { friendlyKeyLabel } from "@/lib/keyLabel";
 import { useInputStore } from "@/store/useInputStore";
@@ -53,17 +53,8 @@ export function DeviceSelector({ value, onChange }: DeviceSelectorProps) {
 }
 
 const BUTTONS: ButtonName[] = ["LP", "MP", "HP", "LK", "MK", "HK"];
-const DIRECTIONS: { key: GamepadDirectionKey; label: string }[] = [
-  { key: "up", label: "↑（上）" },
-  { key: "down", label: "↓（下）" },
-  { key: "left", label: "←（左）" },
-  { key: "right", label: "→（右）" },
-];
 
-type Listening =
-  | { kind: "keyboard-button"; button: ButtonName }
-  | { kind: "gamepad-button"; button: ButtonName }
-  | { kind: "gamepad-direction"; direction: GamepadDirectionKey };
+type Listening = { kind: "keyboard-button" | "gamepad-button"; button: ButtonName };
 
 const captureButtonClass = (active: boolean) =>
   `flex items-center justify-between gap-1 rounded border px-1.5 py-0.5 text-left ${
@@ -72,15 +63,13 @@ const captureButtonClass = (active: boolean) =>
       : "border-neutral-300 bg-white text-neutral-800 hover:bg-neutral-100 dark:border-neutral-700 dark:bg-neutral-900 dark:text-neutral-200 dark:hover:bg-neutral-800"
   }`;
 
-/** キーボードキー／ゲームパッドのボタン番号・十字キー番号を割り当て直すための設定UI */
+/** キーボードキー／ゲームパッドのボタン番号を割り当て直すための設定UI */
 export function ButtonMappingEditor() {
   const keyboardButtonMap = useInputStore((state) => state.keyboardButtonMap);
   const gamepadButtonMap = useInputStore((state) => state.gamepadButtonMap);
-  const gamepadDirectionMap = useInputStore((state) => state.gamepadDirectionMap);
   const gamepadLabelScheme = useInputStore((state) => state.gamepadLabelScheme);
   const setKeyboardKeyForButton = useInputStore((state) => state.setKeyboardKeyForButton);
   const setGamepadIndexForButton = useInputStore((state) => state.setGamepadIndexForButton);
-  const setGamepadIndexForDirection = useInputStore((state) => state.setGamepadIndexForDirection);
   const setGamepadLabelScheme = useInputStore((state) => state.setGamepadLabelScheme);
 
   const [listening, setListening] = useState<Listening | null>(null);
@@ -89,8 +78,6 @@ export function ButtonMappingEditor() {
     Object.entries(keyboardButtonMap).find(([, b]) => b === button)?.[0] ?? "";
   const gamepadIndexForButton = (button: ButtonName) =>
     Object.entries(gamepadButtonMap).find(([, b]) => b === button)?.[0] ?? "";
-  const gamepadIndexForDirection = (direction: GamepadDirectionKey) =>
-    Object.entries(gamepadDirectionMap).find(([, d]) => d === direction)?.[0] ?? "";
 
   // キーボード用キャプチャ：次に押されたキーのcodeをそのまま割り当てる（Escでキャンセル）
   useEffect(() => {
@@ -108,11 +95,10 @@ export function ButtonMappingEditor() {
     return () => window.removeEventListener("keydown", handleKeyDown);
   }, [listening, setKeyboardKeyForButton]);
 
-  // ゲームパッド用キャプチャ（ボタン・方向共通）：キャプチャ開始時点で押されていなかった番号が
-  // 新たに押された瞬間の番号を割り当てる（標準マッピング外のアケコン/レバーレスでも、番号を
-  // 推測させず実際の入力で確定できるようにするため）
+  // ゲームパッド用キャプチャ：キャプチャ開始時点で押されていなかったボタンが新たに押された瞬間の番号を割り当てる
+  // （標準マッピング外のアケコン/レバーレスでも、番号を推測させず実際の入力で確定できるようにするため）
   useEffect(() => {
-    if (listening?.kind !== "gamepad-button" && listening?.kind !== "gamepad-direction") return;
+    if (listening?.kind !== "gamepad-button") return;
     let rafId: number;
     let initial: Set<number> | null = null;
 
@@ -128,11 +114,7 @@ export function ButtonMappingEditor() {
         } else {
           const newlyPressed = [...pressedNow].find((i) => !initial!.has(i));
           if (newlyPressed !== undefined) {
-            if (listening.kind === "gamepad-button") {
-              setGamepadIndexForButton(listening.button, newlyPressed);
-            } else {
-              setGamepadIndexForDirection(listening.direction, newlyPressed);
-            }
+            setGamepadIndexForButton(listening.button, newlyPressed);
             setListening(null);
             return;
           }
@@ -142,7 +124,7 @@ export function ButtonMappingEditor() {
     };
     rafId = requestAnimationFrame(tick);
     return () => cancelAnimationFrame(rafId);
-  }, [listening, setGamepadIndexForButton, setGamepadIndexForDirection]);
+  }, [listening, setGamepadIndexForButton]);
 
   return (
     <div>
@@ -162,37 +144,6 @@ export function ButtonMappingEditor() {
       </div>
 
       <div className="grid grid-cols-[3rem_1fr_1fr] items-center gap-x-2 gap-y-1.5 text-xs">
-        <span className="text-neutral-500">方向</span>
-        <span className="text-neutral-500">キーボード</span>
-        <span className="text-neutral-500">ゲームパッド</span>
-        {DIRECTIONS.map(({ key, label }) => {
-          const gamepadIndex = gamepadIndexForDirection(key);
-          const isListeningGamepad = listening?.kind === "gamepad-direction" && listening.direction === key;
-          return (
-            <Fragment key={key}>
-              <span className="font-mono text-neutral-700 dark:text-neutral-300">{label}</span>
-              <span className="text-neutral-400 dark:text-neutral-600">WASD固定</span>
-              <button
-                type="button"
-                onClick={() => setListening(isListeningGamepad ? null : { kind: "gamepad-direction", direction: key })}
-                className={captureButtonClass(isListeningGamepad)}
-                title="クリックしてコントローラーの十字キー/レバーを押すと割り当てます"
-              >
-                <span>
-                  {isListeningGamepad
-                    ? "入力してください…"
-                    : gamepadIndex !== ""
-                      ? `#${gamepadIndex}`
-                      : "未設定"}
-                </span>
-                <Crosshair className="h-3 w-3 shrink-0 opacity-60" />
-              </button>
-            </Fragment>
-          );
-        })}
-      </div>
-
-      <div className="mt-3 grid grid-cols-[3rem_1fr_1fr] items-center gap-x-2 gap-y-1.5 text-xs">
         <span className="text-neutral-500">ボタン</span>
         <span className="text-neutral-500">キーボード</span>
         <span className="text-neutral-500">ゲームパッド</span>
@@ -202,7 +153,10 @@ export function ButtonMappingEditor() {
           const isListeningGamepad = listening?.kind === "gamepad-button" && listening.button === button;
           return (
             <Fragment key={button}>
-              <span className="font-mono text-neutral-700 dark:text-neutral-300">{button}</span>
+              <span className="flex items-center gap-1.5 font-mono text-neutral-700 dark:text-neutral-300">
+                <ButtonIcon button={button} className="h-3.5 w-3.5" />
+                {button}
+              </span>
 
               <button
                 type="button"
@@ -224,7 +178,7 @@ export function ButtonMappingEditor() {
                   {isListeningGamepad
                     ? "ボタンを押してください…"
                     : gamepadIndex !== ""
-                      ? `${gamepadButtonLabel(Number(gamepadIndex), gamepadLabelScheme)}（#${gamepadIndex}）`
+                      ? gamepadButtonLabel(Number(gamepadIndex), gamepadLabelScheme)
                       : "未設定"}
                 </span>
                 <Crosshair className="h-3 w-3 shrink-0 opacity-60" />
@@ -234,7 +188,7 @@ export function ButtonMappingEditor() {
         })}
       </div>
       <p className="mt-2 text-[11px] text-neutral-500">
-        欄をクリックしてから実際にキー/ボタン/十字キーを押すと割り当てられます。ゲームパッドが反応しない場合、コントローラーの種類によっては標準的なボタン番号と対応しないことがあります（アケコン/レバーレスに多い）。この方式なら番号を推測せずに実際の入力で確定できます。
+        欄をクリックしてから実際にキー/ボタンを押すと割り当てられます。ゲームパッドが反応しない場合、コントローラーの種類によっては標準的なボタン番号と対応しないことがあります（アケコン/レバーレスに多い）。この方式なら番号を推測せずに実際の入力で確定できます。下の「ゲームパッドテスター」で実際にどのボタンが反応しているか確認できます。
       </p>
     </div>
   );
