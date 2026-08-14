@@ -18,6 +18,7 @@
 
 import { useEffect, useMemo, useRef, useState } from "react";
 import { ButtonIcon, DirectionIcon } from "@/components/icons";
+import { formatFrameCount } from "@/lib/formatFrames";
 import { useInputStore } from "@/store/useInputStore";
 import type { InputFrame } from "@/types";
 
@@ -82,8 +83,8 @@ export function KeyDisplay() {
           // 左端に保持フレーム数（数字のみ）、続けて方向（水色）とボタン（強度で色分け）のアイコンを
           // 1行に並べる。行ごとの枠線・背景は付けず、暗いHUD風の背景の上に淡々と積み上げる。
           <div key={frame.frame} className="flex shrink-0 items-center gap-1.5 px-1 py-0.5 leading-none">
-            <span className="w-7 shrink-0 text-right text-sm tabular-nums text-neutral-400">
-              {holdFrames !== null ? holdFrames : ""}
+            <span className="w-9 shrink-0 text-right text-sm tabular-nums text-neutral-400">
+              {holdFrames !== null ? formatFrameCount(holdFrames) : ""}
             </span>
             <DirectionIcon direction={frame.direction} className="h-4 w-4 shrink-0 text-sky-400" />
             <span className="flex min-h-[16px] items-center gap-1">

@@ -17,6 +17,7 @@ import { useEffect, useMemo, useRef, useState } from "react";
 import { HelpCircle, X } from "lucide-react";
 import commandsData from "@/data/commands.json";
 import { createCommandMatcher, type CommandMatcher } from "@/lib/analyzer";
+import { formatFrameCount } from "@/lib/formatFrames";
 import { stepsToArrowNotation } from "@/lib/notation";
 import { playFailSound, playTierSound } from "@/lib/sound";
 import { useInputStore } from "@/store/useInputStore";
@@ -264,7 +265,9 @@ export function PracticeMode() {
           成功率
         </div>
         <div className="rounded bg-neutral-100 p-2 dark:bg-neutral-900">
-          <p className="text-lg font-semibold text-neutral-900 dark:text-neutral-100">{Math.round(avgFrameCount)}F</p>
+          <p className="text-lg font-semibold text-neutral-900 dark:text-neutral-100">
+            {formatFrameCount(Math.round(avgFrameCount))}F
+          </p>
           平均フレーム
         </div>
       </div>
@@ -278,7 +281,7 @@ export function PracticeMode() {
             }`}
             title={
               attempt.success
-                ? `${TIER_LABELS[attempt.tier ?? "ok"]} / ${attempt.frameCount}F / エラー${attempt.errors.length}件`
+                ? `${TIER_LABELS[attempt.tier ?? "ok"]} / ${formatFrameCount(attempt.frameCount)}F / エラー${attempt.errors.length}件`
                 : `失敗 / エラー${attempt.errors.length}件`
             }
           >
