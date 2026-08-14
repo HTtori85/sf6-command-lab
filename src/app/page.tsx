@@ -12,11 +12,14 @@
  * - src/components/SoundControls.tsx（入力音・判定音・メトロノーム設定）
  * - src/components/GamepadTester.tsx（ゲームパッドの生入力を可視化する診断パネル）
  * - src/components/SimplifiedInputGuide.tsx（省略入力＝簡易入力のコツ一覧）
+ * - src/components/AdSlot.tsx（AdSense広告枠。パブリッシャーID未設定の間は何も表示しない）
  */
 "use client";
 
 import { useEffect, useState } from "react";
 import { RotateCcw } from "lucide-react";
+import Link from "next/link";
+import { AdSlot } from "@/components/AdSlot";
 import { CommandAnalyzer } from "@/components/CommandAnalyzer";
 import { ButtonMappingEditor, DeviceSelector } from "@/components/DeviceSelector";
 import { GamepadTester } from "@/components/GamepadTester";
@@ -91,6 +94,7 @@ export default function Home() {
         </div>
 
         <PracticeMode />
+        <AdSlot slot="0000000000" />
         <SimplifiedInputGuide />
         <CommandAnalyzer />
         <GamepadTester />
@@ -104,6 +108,23 @@ export default function Home() {
             <ButtonMappingEditor />
           </div>
         </section>
+
+        <AdSlot slot="0000000001" />
+
+        <footer className="flex flex-wrap items-center justify-center gap-3 py-2 text-xs text-neutral-500">
+          <Link href="/privacy" className="hover:underline">
+            プライバシーポリシー
+          </Link>
+          <span aria-hidden>・</span>
+          <a
+            href="https://github.com/HTtori85/sf6-command-lab"
+            target="_blank"
+            rel="noreferrer"
+            className="hover:underline"
+          >
+            GitHub
+          </a>
+        </footer>
       </main>
     </div>
   );
